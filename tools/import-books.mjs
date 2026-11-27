@@ -127,13 +127,15 @@ mkdirSync(OUT_BOOKS, { recursive: true });
 mkdirSync(OUT_COVERS, { recursive: true });
 
 function parseFrontmatter(src) {
-  const m = src.match(/^---\n([\s\S]*?)\n---\n/);
+  // \r? 容忍：git autocrlf checkout 会把文件落成 CRLF（2026-11-27 实咬）
+  const m = src.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (!m) throw new Error('no frontmatter');
   return { fm: JSON.parse(m[1]), body: src.slice(m[0].length) };
 }
 
 let generated = 0;
 const skipped = [];
+const twTouched = new Set(); // 本次重灌过的 zh-tw slug——opencc 后处理只碰这些，避免重跑损伤已转好的文件
 
 for (const book of meta.books) {
   for (const ed of book.editions) {
@@ -228,6 +230,7 @@ for (const book of meta.books) {
       `Buy: https://www.amazon.${ed.market}/dp/${ed.asin}`,
     ].join('\n');
     writeFileSync(entryPath, `---\n${JSON.stringify(fm, null, 2)}\n---\n${body}`);
+    if (ed.lang === 'zh-tw') twTouched.add(book.slug);
     generated++;
   }
 }
@@ -239,8 +242,8 @@ for (const book of meta.books) {
 let twPass = 0;
 const cn2tw = OpenCC.Converter({ from: 'cn', to: 'tw' });
 const t = (s) => (typeof s === 'string' ? cn2tw(s) : s);
-for (const book of meta.books) {
-  const p = join(OUT_BOOKS, `${book.slug}-zh-tw.md`);
+for (const slug of twTouched) {
+  const p = join(OUT_BOOKS, `${slug}-zh-tw.md`);
   if (!existsSync(p)) continue;
   const { fm, body } = parseFrontmatter(readFileSync(p, 'utf8'));
   fm.description = t(fm.description);

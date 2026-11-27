@@ -231,7 +231,7 @@
     {
       "slug": "ai-agents",
       "series": "ai-agents",
-      "sourceDir": "xr-know-015",
+      "sourceDir": "xr-know-008",
       "editions": [
         {
           "lang": "zh-tw",
@@ -249,7 +249,7 @@
           "mirrorOf": "zh-tw"
         }
       ],
-      "caseRepo": "https://github.com/zcqiand/illustrated-agent-book"
+      "caseRepo": "https://github.com/zcqiand/ai-agent-book"
     },
     {
       "slug": "vue",

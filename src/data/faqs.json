@@ -158,10 +158,10 @@
   },
   "ai-agents": {
     "zh-tw": [
-      { "question": "《圖解 AI Agent》適合什麼讀者？", "answer": "想理解智慧代理（AI Agent）內部機制的工程師與產品人：用圖解方式講清規劃、工具呼叫、記憶與多代理協作。" },
-      { "question": "需要數學或 ML 基礎嗎？", "answer": "不需要——聚焦架構與工程視角，不涉及訓練模型的數學。" },
-      { "question": "與 Claude Code / Codex 書怎麼搭配？", "answer": "本書講「代理為何這樣設計」，工具書講「怎麼用」——先讀本書建立心智模型再上手工具最順。" },
-      { "question": "有對應的實作嗎？", "answer": "各章附小型可運行範例，重點在讀懂圖示與設計取捨。" }
+      { "question": "《AI智慧體從入門到專案實踐》適合什麼讀者？", "answer": "想用 LangChain + LangGraph 做生產級 AI 應用的工程師：從智能體核心組件（LLM、工具、記憶、規劃）一路走到部署、可觀測與安全。" },
+      { "question": "需要數學或 ML 基礎嗎？", "answer": "不需要——聚焦架構與工程視角，講的是狀態機、檢查點、HITL 護欄這些生產化工程命題，不涉及訓練模型的數學。" },
+      { "question": "做出什麼專案？", "answer": "三個生產級案例：SQL 自愈 Agent（報錯後自己改自己＋HITL 熔斷）、多租戶客服 Agent（thread_id 即租戶邊界）、金融輿情投研 Agent（證據鏈防幻覺＋金標回測）。" },
+      { "question": "有對應的實作嗎？", "answer": "各章代碼清單可運行，案例配套 GitHub 代碼倉庫（github.com/zcqiand/ai-agent-book）全部開源。" }
     ]
   }
 }
