@@ -17,6 +17,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import OpenCC from 'opencc-js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const KNOWLEDGE = 'D:/qiand-life/1-projects/xr-knowledge-suite/output';
@@ -231,6 +232,31 @@ for (const book of meta.books) {
   }
 }
 
+// ---------- zh-tw 后处理：简→繁（opencc-js） ----------
+// 知识库 zh-tw 源目录简繁混杂，description/sample/toc 带简体混排。
+// 必须在主循环结束后跑：此时 zh-cn 镜像分支已拷走原始简体，本遍只回写 *-zh-tw.md，天然不污染简中。
+// title/subtitle 不转（真源=Amazon 在架 listing，已繁体）；正文 body 是繁体样板不动。
+let twPass = 0;
+const cn2tw = OpenCC.Converter({ from: 'cn', to: 'tw' });
+const t = (s) => (typeof s === 'string' ? cn2tw(s) : s);
+for (const book of meta.books) {
+  const p = join(OUT_BOOKS, `${book.slug}-zh-tw.md`);
+  if (!existsSync(p)) continue;
+  const { fm, body } = parseFrontmatter(readFileSync(p, 'utf8'));
+  fm.description = t(fm.description);
+  for (const s of fm.sample || []) {
+    s.heading = t(s.heading);
+    s.code = t(s.code);
+    if (s.note != null) s.note = t(s.note);
+  }
+  for (const sec of fm.toc || []) {
+    sec.part = t(sec.part);
+    sec.items = (sec.items || []).map(t);
+  }
+  writeFileSync(p, `---\n${JSON.stringify(fm, null, 2)}\n---\n${body}`);
+  twPass++;
+}
+
 // ---------- llms.txt（与书目同步再生成） ----------
 
 function parseEntryFile(slug, lang) {
@@ -291,7 +317,7 @@ const llms = [
 ].join('\n');
 writeFileSync(join(ROOT, 'public/llms.txt'), llms);
 
-console.log(`import-books: generated ${generated} entries`);
+console.log(`import-books: generated ${generated} entries, zh-tw opencc pass ${twPass} files`);
 if (skipped.length) {
   console.log(`skipped ${skipped.length}:`);
   for (const s of skipped) console.log(`  - ${s}`);

@@ -9,19 +9,19 @@
   "market": "com",
   "onSale": true,
   "cover": "/covers/codex-zh-tw.jpg",
-  "description": "--- 2025 年秋天，我在一个创业公司担任技术顾问。团队决定全面引入 AI 编程工具来提升开发效率，他们试过 GitHub Copilot，也试过让工程师在 ChatGPT 网页版上调试代码，但效果都不理想——Copilot 只能补全零散代码片段，ChatGPT 需要手动复制粘贴，每次都得重新解释项目上下文。后来他们发现了 OpenAI Codex，一个能直接操作文件系统、运行命令、管理 Git 的代理式编码工具。短短两个月，团队的开发效率提升了 40%，但那段摸索配置、扩展机制、安全边界的经历充满了弯路。这本书就是那段经历的系统化总结——我希望其他开发者不需要重复那些踩坑的过程。",
+  "description": "--- 2025 年秋天，我在一個創業公司擔任技術顧問。團隊決定全面引入 AI 編程工具來提升開發效率，他們試過 GitHub Copilot，也試過讓工程師在 ChatGPT 網頁版上調試代碼，但效果都不理想——Copilot 只能補全零散代碼片段，ChatGPT 需要手動複製粘貼，每次都得重新解釋項目上下文。後來他們發現了 OpenAI Codex，一個能直接操作文件系統、運行命令、管理 Git 的代理式編碼工具。短短兩個月，團隊的開發效率提升了 40%，但那段摸索配置、擴展機制、安全邊界的經歷充滿了彎路。這本書就是那段經歷的系統化總結——我希望其他開發者不需要重複那些踩坑的過程。",
   "faq": [],
   "toc": [],
   "sample": [
     {
-      "heading": "1.2　AI 编程的三次范式转变",
+      "heading": "1.2　AI 編程的三次範式轉變",
       "lang": "mermaid",
-      "code": "flowchart LR\n    A[代码补全<br/>Copilot 早期] -->|\"Tab 续写\\n只看光标周围\"| B[聊天助手<br/>ChatGPT 面板]\n    B -->|\"问答交互\\n无法操作文件\"| C[Agentic Coding<br/>Codex]\n    C -->|\"自主规划执行\\n读写文件·运行命令\"| D[开发者审查确认]\n\n    style A fill:#f5f5f5,stroke:#999\n    style B fill:#f5f5f5,stroke:#999\n    style C fill:#d4edda,stroke:#28a745,stroke-width:2px\n    style D fill:#cce5ff,stroke:#007bcc"
+      "code": "flowchart LR\n    A[代碼補全<br/>Copilot 早期] -->|\"Tab 續寫\\n只看光標周圍\"| B[聊天助手<br/>ChatGPT 面板]\n    B -->|\"問答交互\\n無法操作文件\"| C[Agentic Coding<br/>Codex]\n    C -->|\"自主規劃執行\\n讀寫文件·運行命令\"| D[開發者審查確認]\n\n    style A fill:#f5f5f5,stroke:#999\n    style B fill:#f5f5f5,stroke:#999\n    style C fill:#d4edda,stroke:#28a745,stroke-width:2px\n    style D fill:#cce5ff,stroke:#007bcc"
     },
     {
-      "heading": "1.2　AI 编程的三次范式转变",
+      "heading": "1.2　AI 編程的三次範式轉變",
       "lang": "text",
-      "code": "\n图1-1　AI 编程范式的三次演进\n\n如果你之前只用过 Copilot 或 ChatGPT 写代码，你可能已经隐约感觉到它们的「天花板」——Copilot 能帮你省掉重复输入，但没法帮你规划整个功能；ChatGPT 能回答你的问题，但每次都要你手动把代码贴来贴去。Agentic Coding 打破了这个天花板，因为它能真正「动手」。\n\n这三次转变的核心差异在于**自主性**：代码补全的自主性接近于零（它只负责猜下一行）；聊天助手的自主性仅限于回答（它不能动手）；而 Agentic Coding 的自主性覆盖了从理解到执行的完整链路。\n\n表1-1　三种 AI 编程范式的能力对比\n\n| 能力维度 | 代码补全 | 聊天助手 | Agentic Coding |\n|---|---|---|---|\n| 读取项目文件 | 仅当前文件 | 需手动粘贴 | 自主遍历整个仓库 |\n| 执行终端命令 | 不支持 | 不支持 | 自主执行并读取输出 |\n| 修改代码 | 仅续写当前行 | 需手动复制粘贴 | 直接编辑文件 |\n| 任务规划 | 不支持 | 需人工拆解 | 自主拆解并分步执行 |\n| 错误修正 | 不支持 | 需人工迭代 | 读取报错后自主修正 |\n\n进入 Agentic Coding 时代后，一个关键变化是：你对 AI 的指令从「怎么做」变成了「要什么」。你不需要告诉它先读哪个文件、再改哪个函数——你只需要描述目标，由它自己规划路径。这个转变会贯穿本书的每一个章节。\n\n## 1.3　Codex 核心能力全景\n\nCodex 是 OpenAI 推出的代理式编码工具，官方将其定位为「One agent for everywhere you code」——一个覆盖你所有编码场景的 AI 代理。[1] 它由 Rust 语言编写，CLI 部分完全开源，托管在 GitHub 上（`github.com/openai/codex`），任何人都可以审查其源码。[3]\n\nCodex 有五大核心能力，这五个能力构成了一个完整的「编码代理闭环」：[1]\n\n```mermaid\nflowchart TD\n    subgraph 五大核心能力\n        A[写代码<br/>Write Code] --> B[理解代码库<br/>Understand Codebase]\n        B --> C[审查代码<br/>Review Code]\n        C --> D[调试修复<br/>Debug & Fix]\n        D --> E[自动化任务<br/>Automate Tasks]\n        E --> A\n    end\n\n    style A fill:#d4edda,stroke:#28a745\n    style B fill:#cce5ff,stroke:#007bcc\n    style C fill:#fff3cd,stroke:#ffc107\n    style D fill:#f8d7da,stroke:#dc3545\n    style E fill:#e2d9f3,stroke:#6f42c1"
+      "code": "\n圖1-1　AI 編程範式的三次演進\n\n如果你之前只用過 Copilot 或 ChatGPT 寫代碼，你可能已經隱約感覺到它們的「天花板」——Copilot 能幫你省掉重複輸入，但沒法幫你規劃整個功能；ChatGPT 能回答你的問題，但每次都要你手動把代碼貼來貼去。Agentic Coding 打破了這個天花板，因為它能真正「動手」。\n\n這三次轉變的核心差異在於**自主性**：代碼補全的自主性接近於零（它只負責猜下一行）；聊天助手的自主性僅限於回答（它不能動手）；而 Agentic Coding 的自主性覆蓋了從理解到執行的完整鏈路。\n\n表1-1　三種 AI 編程範式的能力對比\n\n| 能力維度 | 代碼補全 | 聊天助手 | Agentic Coding |\n|---|---|---|---|\n| 讀取項目文件 | 僅當前文件 | 需手動粘貼 | 自主遍歷整個倉庫 |\n| 執行終端命令 | 不支持 | 不支持 | 自主執行並讀取輸出 |\n| 修改代碼 | 僅續寫當前行 | 需手動複製粘貼 | 直接編輯文件 |\n| 任務規劃 | 不支持 | 需人工拆解 | 自主拆解並分步執行 |\n| 錯誤修正 | 不支持 | 需人工迭代 | 讀取報錯後自主修正 |\n\n進入 Agentic Coding 時代後，一個關鍵變化是：你對 AI 的指令從「怎麼做」變成了「要什麼」。你不需要告訴它先讀哪個文件、再改哪個函數——你只需要描述目標，由它自己規劃路徑。這個轉變會貫穿本書的每一個章節。\n\n## 1.3　Codex 核心能力全景\n\nCodex 是 OpenAI 推出的代理式編碼工具，官方將其定位為「One agent for everywhere you code」——一個覆蓋你所有編碼場景的 AI 代理。[1] 它由 Rust 語言編寫，CLI 部分完全開源，託管在 GitHub 上（`github.com/openai/codex`），任何人都可以審查其源碼。[3]\n\nCodex 有五大核心能力，這五個能力構成了一個完整的「編碼代理閉環」：[1]\n\n```mermaid\nflowchart TD\n    subgraph 五大核心能力\n        A[寫代碼<br/>Write Code] --> B[理解代碼庫<br/>Understand Codebase]\n        B --> C[審查代碼<br/>Review Code]\n        C --> D[調試修復<br/>Debug & Fix]\n        D --> E[自動化任務<br/>Automate Tasks]\n        E --> A\n    end\n\n    style A fill:#d4edda,stroke:#28a745\n    style B fill:#cce5ff,stroke:#007bcc\n    style C fill:#fff3cd,stroke:#ffc107\n    style D fill:#f8d7da,stroke:#dc3545\n    style E fill:#e2d9f3,stroke:#6f42c1"
     }
   ],
   "caseRepo": "https://github.com/zcqiand/codex-book",

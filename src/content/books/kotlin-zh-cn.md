@@ -4,7 +4,7 @@
   "lang": "zh-cn",
   "title": "Kotlin 從入門到專案實踐",
   "subtitle": "Kotlin 2.4（K2 編譯器）+ Ktor 3 全路徑教程，從零基礎到雙企業級案例倉",
-  "series": "frontend",
+  "series": "backend",
   "asin": "B0HQ16BN7L",
   "market": "com",
   "onSale": false,

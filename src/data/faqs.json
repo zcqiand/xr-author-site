@@ -78,17 +78,17 @@
   },
   "flutter": {
     "zh-tw": [
-      { "question": "Flutter 版本與平台覆蓋？", "answer": "講最新穩定版 Flutter，以跨平台（iOS/Android/Web）實戰為主軸，Dart 語言從零教起。" },
+      { "question": "Flutter 版本與平臺覆蓋？", "answer": "講最新穩定版 Flutter，以跨平臺（iOS/Android/Web）實戰為主軸，Dart 語言從零教起。" },
       { "question": "不會 Dart 可以學嗎？", "answer": "可以——書裡先帶 Dart 基礎再進 Flutter UI，不需要另行入門。" },
       { "question": "做出什麼作品？", "answer": "兩個可上架等級的完整 App，涵蓋狀態管理、路由、網路與打包發布。" },
-      { "question": "與原生開發書怎麼選？", "answer": "要一套程式碼跑多平台選 Flutter（本書）；要深耕單一平台生態可選同系列 Swift/Kotlin/Android 書。" }
+      { "question": "與原生開發書怎麼選？", "answer": "要一套程式碼跑多平臺選 Flutter（本書）；要深耕單一平臺生態可選同系列 Swift/Kotlin/Android 書。" }
     ]
   },
   "swift": {
     "zh-tw": [
       { "question": "這本 Swift 書適合 iOS 新手嗎？", "answer": "適合——從 Swift 語言基礎到兩個完整可上架 App，路徑是連續的，不需要 iOS 開發經驗。" },
       { "question": "涵蓋 SwiftUI 還是 UIKit？", "answer": "以 SwiftUI 為主軸，穿插必要的系統框架整合，符合當前 App Store 審核與上架流程。" },
-      { "question": "需要 Mac 嗎？", "answer": "是——iOS 開發須 Xcode，請準備一台能跑最新 Xcode 的 Mac。" },
+      { "question": "需要 Mac 嗎？", "answer": "是——iOS 開發須 Xcode，請準備一臺能跑最新 Xcode 的 Mac。" },
       { "question": "做出什麼 App？", "answer": "兩個完整可上架 App：從需求、介面、資料層到 TestFlight/上架流程。" }
     ]
   },
@@ -105,7 +105,7 @@
       { "question": "這本 Android 書的技術棧？", "answer": "Jetpack Compose + Material 3 為主軸，直接教現代宣告式 UI，不糾纏舊 View 體系。" },
       { "question": "零基礎直達企業級專案現實嗎？", "answer": "現實——語言基礎（Kotlin）先行，兩個企業級真實專案把架構、狀態、網路與發布走全。" },
       { "question": "會學到架構模式嗎？", "answer": "會——MVVM 與 Compose 狀態管理貫穿兩個專案，貼近生產團隊寫法。" },
-      { "question": "與 Kotlin 書的關係？", "answer": "同系列《Kotlin 從入門到專案實踐》補語言深度，本書聚焦 Android 平台工程。" }
+      { "question": "與 Kotlin 書的關係？", "answer": "同系列《Kotlin 從入門到專案實踐》補語言深度，本書聚焦 Android 平臺工程。" }
     ]
   },
   "spring-boot": {
