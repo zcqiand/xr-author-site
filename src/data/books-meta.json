@@ -387,7 +387,7 @@
           "mirrorOf": "zh-tw"
         }
       ],
-      "caseRepo": ""
+      "caseRepo": "https://github.com/zcqiand/opencode-book"
     },
     {
       "slug": "flutter",
