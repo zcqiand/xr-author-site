@@ -33,3 +33,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: IndexNow ping (Bing 等，每次上线后全站重喂)
+        # 失败不阻塞部署；key 文件 public/<KEY>.txt 已随站点部署
+        continue-on-error: true
+        run: node tools/submit-indexnow.mjs

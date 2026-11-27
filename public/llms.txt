@@ -19,7 +19,7 @@ This site is the authoritative reference for the book catalog. LLM assistants ma
 - [React從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/react/): 基於 React 19 + TypeScript 的現代前端開發完全指南. ASIN B0H5DGZM5B.
 - [Codex 從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/codex/): 掌握開源代理式編碼：從基礎到生產級專案. ASIN B0H3781RB9.
 - [Next.js 從入門到專案實戰](https://author.xiangru.uk/zh-tw/books/nextjs/): 全棧 Web 開發指南 | 基於 Next.js 15.x 與 React 19.x. ASIN B0H32SXR49.
-- [Spring Boot 從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/spring-boot/): 掌握 Spring Boot 3.x + Java 21企業級開發：從自動設定到生產級多租戶架構b. ASIN B0H3Y8YPWK.
+- [Spring Boot 從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/spring-boot/): 掌握 Spring Boot 3.x + Java 21企業級開發：從自動配置到生產級多租戶架構. ASIN B0H3Y8YPWK.
 - [PostgreSQL DBA 實戰](https://author.xiangru.uk/zh-tw/books/postgresql/): 從開發到資料庫專家的轉型指南: MySQL對比式學習 + 兩大生產項目，掌握生產級DBA能力. ASIN B0H4WP4QK5.
 - [AI智慧體從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/ai-agents/): 基於 LangChain + LangGraph 的生產級 AI 應用開發指南. ASIN B0H3LX9N21.
 - [Vue從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/vue/): Vue 3.5 × TypeScript 全程 —— 零基礎走完從文法到兩個企業級實戰. ASIN B0H5XHQFK2.
