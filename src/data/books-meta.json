@@ -19,10 +19,10 @@
     {
       "id": "backend",
       "name": {
-        "en": "Backend Development Series",
-        "ja": "バックエンド開発シリーズ",
-        "zh-tw": "後端開發系列",
-        "zh-cn": "后端开发系列"
+        "en": "Backend & Database Development Series",
+        "ja": "バックエンド・データベース開発シリーズ",
+        "zh-tw": "後端與資料庫開發系列",
+        "zh-cn": "后端与数据库开发系列"
       },
       "description": {
         "en": "Server-side engineering: Spring Boot, PostgreSQL, Ruby, ASP.NET Core, and Raspberry Pi projects.",
