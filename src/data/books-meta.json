@@ -53,150 +53,410 @@
       "series": "ai-agents",
       "sourceDir": "xr-know-002",
       "editions": [
-        { "lang": "en", "asin": "B0HR5ZVRB3", "market": "com", "subdir": "en", "onSale": true },
-        { "lang": "ja", "asin": "B0HR5RXSN5", "market": "co.jp", "subdir": "ja", "onSale": true },
-        { "lang": "zh-tw", "asin": "B0H3M3B8GG", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H3M3B8GG", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "en",
+          "asin": "B0HR5ZVRB3",
+          "market": "com",
+          "subdir": "en",
+          "onSale": true
+        },
+        {
+          "lang": "ja",
+          "asin": "B0HR5RXSN5",
+          "market": "co.jp",
+          "subdir": "ja",
+          "onSale": true
+        },
+        {
+          "lang": "zh-tw",
+          "asin": "B0H3M3B8GG",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H3M3B8GG",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/claude-code-book"
     },
     {
       "slug": "react",
       "series": "frontend",
       "sourceDir": "xr-know-001",
       "editions": [
-        { "lang": "en", "asin": "B0HS1FHJ64", "market": "com", "subdir": "en", "onSale": true },
-        { "lang": "ja", "asin": "B0HS1247NS", "market": "co.jp", "subdir": "ja", "onSale": true },
-        { "lang": "zh-tw", "asin": "B0H5DGZM5B", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H5DGZM5B", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "en",
+          "asin": "B0HS1FHJ64",
+          "market": "com",
+          "subdir": "en",
+          "onSale": true
+        },
+        {
+          "lang": "ja",
+          "asin": "B0HS1247NS",
+          "market": "co.jp",
+          "subdir": "ja",
+          "onSale": true
+        },
+        {
+          "lang": "zh-tw",
+          "asin": "B0H5DGZM5B",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H5DGZM5B",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/react-book"
     },
     {
       "slug": "codex",
       "series": "ai-agents",
       "sourceDir": "xr-know-003",
       "editions": [
-        { "lang": "en", "asin": "B0HSLZWJRV", "market": "com", "subdir": "en", "onSale": true },
-        { "lang": "ja", "asin": "B0HSLVJW73", "market": "co.jp", "subdir": "ja", "onSale": true },
-        { "lang": "zh-tw", "asin": "B0H3781RB9", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H3781RB9", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "en",
+          "asin": "B0HSLZWJRV",
+          "market": "com",
+          "subdir": "en",
+          "onSale": true
+        },
+        {
+          "lang": "ja",
+          "asin": "B0HSLVJW73",
+          "market": "co.jp",
+          "subdir": "ja",
+          "onSale": true
+        },
+        {
+          "lang": "zh-tw",
+          "asin": "B0H3781RB9",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H3781RB9",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/codex-book"
     },
     {
       "slug": "nextjs",
       "series": "frontend",
       "sourceDir": "xr-know-004",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H32SXR49", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H32SXR49", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H32SXR49",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H32SXR49",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/nextjs-book"
     },
     {
       "slug": "spring-boot",
       "series": "backend",
       "sourceDir": "xr-know-006",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H3Y8YPWK", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H3Y8YPWK", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H3Y8YPWK",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H3Y8YPWK",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/spring-boot-book"
     },
     {
       "slug": "postgresql",
       "series": "backend",
       "sourceDir": "xr-know-007",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H4WP4QK5", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H4WP4QK5", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H4WP4QK5",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H4WP4QK5",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/postgresql-dba-book"
     },
     {
       "slug": "ai-agents",
       "series": "ai-agents",
       "sourceDir": "xr-know-015",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H3LX9N21", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H3LX9N21", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H3LX9N21",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H3LX9N21",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/illustrated-agent-book"
     },
     {
       "slug": "vue",
       "series": "frontend",
       "sourceDir": "xr-know-011",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H5XHQFK2", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H5XHQFK2", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H5XHQFK2",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H5XHQFK2",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/vue-book"
     },
     {
       "slug": "ruby",
       "series": "backend",
       "sourceDir": "xr-know-012",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H6BYXJXB", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H6BYXJXB", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H6BYXJXB",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H6BYXJXB",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/ruby-book"
     },
     {
       "slug": "swift",
       "series": "frontend",
       "sourceDir": "xr-know-013",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0H66TK2FF", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0H66TK2FF", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0H66TK2FF",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0H66TK2FF",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/swift-book"
     },
     {
       "slug": "aspnet-core",
       "series": "backend",
       "sourceDir": "xr-know-016",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HLV92JV4", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HLV92JV4", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HLV92JV4",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HLV92JV4",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/aspnetcore-book"
     },
     {
       "slug": "pi",
       "series": "backend",
       "sourceDir": "xr-know-017",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HNN6NKXX", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HNN6NKXX", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HNN6NKXX",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HNN6NKXX",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/pi-book"
     },
     {
       "slug": "opencode",
       "series": "ai-agents",
       "sourceDir": "xr-know-018",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HMP3BLT2", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HMP3BLT2", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HMP3BLT2",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HMP3BLT2",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": ""
     },
     {
       "slug": "flutter",
       "series": "frontend",
       "sourceDir": "xr-know-019",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HP83QH4L", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HP83QH4L", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HP83QH4L",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HP83QH4L",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/flutter-book"
     },
     {
       "slug": "kotlin",
       "series": "frontend",
       "sourceDir": "xr-know-020",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HQ16BN7L", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HQ16BN7L", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HQ16BN7L",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HQ16BN7L",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/kotlin-book"
     },
     {
       "slug": "android",
       "series": "frontend",
       "sourceDir": "xr-know-021",
       "editions": [
-        { "lang": "zh-tw", "asin": "B0HPZZRMXR", "market": "com", "subdir": "", "onSale": true },
-        { "lang": "zh-cn", "asin": "B0HPZZRMXR", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
-      ]
+        {
+          "lang": "zh-tw",
+          "asin": "B0HPZZRMXR",
+          "market": "com",
+          "subdir": "",
+          "onSale": true
+        },
+        {
+          "lang": "zh-cn",
+          "asin": "B0HPZZRMXR",
+          "market": "com",
+          "subdir": "",
+          "onSale": false,
+          "mirrorOf": "zh-tw"
+        }
+      ],
+      "caseRepo": "https://github.com/zcqiand/android-book"
     }
   ]
 }

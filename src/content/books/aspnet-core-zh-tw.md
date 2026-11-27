@@ -24,7 +24,7 @@
       "code": "\n作者环境实测输出为 `8.0.202`；读者执行后输出 `8.0.x` 系列的版本号即为安装成功——这个号会随补丁更新而变化，只要前两位是 8.0 就与本书口径一致。如果提示「dotnet 不是内部或外部命令」，说明安装未完成或终端没有继承新的环境变量，重开一个终端窗口再试。\n\nSDK 就绪后，用一条命令生成第一个项目。下面的命令让模板引擎在当前目录创建一个名为 FirstDotNetApp 的控制台项目，进入该目录并运行它。\n\n```bash {title=\"代码清单1-2: 创建并运行第一个控制台程序\"}\ndotnet new console -o FirstDotNetApp\ncd FirstDotNetApp\ndotnet run"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/aspnetcore-book",
   "videos": []
 }
 ---

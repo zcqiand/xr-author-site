@@ -8,7 +8,9 @@
   },
   "sameAs": [
     "https://www.amazon.com/author/xiangru",
-    "https://github.com/zcqiand"
+    "https://github.com/zcqiand",
+    "https://www.youtube.com/@nanrongxiangru",
+    "https://space.bilibili.com/405073645"
   ],
   "bio": {
     "en": "Xiangru Nanrong is an independent technical author on Amazon Kindle. He writes practical, project-driven books on AI coding agents and modern software engineering — from Claude Code and OpenAI Codex to React, Spring Boot, PostgreSQL, and beyond. Every book in his catalog walks from first principles to a real, runnable project: no toy examples, no abandoned half-demos. The AI & Agentic Development series teaches engineers to deliver complete projects *with* an AI agent — specification, implementation, review, and deployment — while the frontend and backend series cover the full modern stack in the same two-projects-per-book format. Books are published in English, Japanese, and Traditional Chinese editions.",

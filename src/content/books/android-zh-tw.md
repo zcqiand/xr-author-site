@@ -450,7 +450,7 @@
       "code": "\n图1-1　一个资料页的组合树\n如图 1-1 所示，整页是一棵树：根是页面，枝是区块，叶是具体控件。这棵树并非画出来给人看的装饰，它就是程序运行时 Compose 眼中的界面结构，1.6 节你会亲手画一棵。\n\n还有一个名字现在立起来：状态变化后，Compose 重新执行相关的可组合函数、得到新界面，这个过程的正式名字叫重组。它为什么高效、什么时候会白费力气，留到重组原理的章节细讲；本章只需记住，界面更新靠重新求值，不靠手动改。\n\n描述与求值的心智立住了。可它要接替的那套旧写法究竟怎么干活？下一节把两代方案摆上同一张解剖台。\n## 1.4 声明式与命令式在 Android 语境下的差异\n\n本节把声明式（Compose）与命令式 UI（View 体系）并排拆开，看清两者在 Android 语境下的真正分界。\n\n先看旧写法。View 体系是 Android 的上一代界面方案：界面结构写在一份 XML 布局文件里，代码通过 findViewById 在控件对象堆里找回要改的那个，再手动修改它的属性。同样是「显示一行问候语」，View 体系的写法见清单 1-2：\n\n```kotlin {title=\"代码清单1-2: View 体系的命令式写法对照\"}\nimport android.os.Bundle\nimport android.widget.TextView\nimport androidx.appcompat.app.AppCompatActivity\n\nclass OldMainActivity : AppCompatActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        // 第一步：把 XML 布局文件实例化成一群控件对象。\n        setContentView(R.layout.activity_old_main)\n        // 第二步：从对象堆里找回要改的那个控件，拿到它的引用。\n        val label = findViewById<TextView>(R.id.greeting_label)\n        // 第三步：把要显示的内容手动写进控件属性。\n        label.text = \"你好，Android\"\n    }\n}"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/android-book",
   "videos": []
 }
 ---

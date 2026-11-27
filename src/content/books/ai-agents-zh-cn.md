@@ -163,7 +163,7 @@
     }
   ],
   "sample": [],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/illustrated-agent-book",
   "videos": [],
   "mirrorOf": "zh-tw"
 }

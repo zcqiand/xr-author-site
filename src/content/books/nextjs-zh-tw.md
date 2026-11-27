@@ -38,7 +38,7 @@
       "code": "\n图1-1　Next.js 请求处理流程\n\n\n当用户访问一个 Next.js 页面时，请求首先到达 Next.js Router，然后根据页面的渲染方式（静态生成、ISR 或 SSR）来决定如何响应。整个过程对开发者是透明的，你只需要专注于编写页面组件。\n\n### 1.2.3 举个例子：创建一个任务看板首页\n\n用纯 React 创建一个任务看板首页，你需要：\n\n1. 自己搭建一个 Node.js 服务，配置 Express 或其他框架\n\n2. 在服务端使用 `react-dom/server` 渲染 React 组件\n\n3. 配置 Webpack 实现代码分割和热重载\n\n4. 引入 `react-router-dom` 配置路由\n\n5. 写图片懒加载逻辑\n\n用 Next.js，你只需要：\n\n```bash {title=\"代码清单1-1: 创建 Next.js 项目\"}\nnpx create-next-app@latest taskflow-board --typescript --tailwind\ncd taskflow-board\nnpm run dev\n"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/nextjs-book",
   "videos": []
 }
 ---

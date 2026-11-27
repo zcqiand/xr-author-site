@@ -24,7 +24,7 @@
       "code": "\nasdf 是更通用的版本管理器，同时支持 Ruby、Node.js、Python 等多种语言。Windows 用户可以用 RubyInstaller 配合 uru 工具实现类似效果。\n\n## 1.6 验证安装：你的第一个命令\n\n安装完成后，验证环境是否正常工作是至关重要的一步。很多初学者跳过这一步，直接开始写代码，结果遇到问题后难以定位原因。\n\n打开你的终端，输入以下命令并回车：\n\n```bash {title=\"代码清单1-3: 查看 Ruby 版本验证安装\"}\nruby -v"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/ruby-book",
   "videos": []
 }
 ---

@@ -575,7 +575,7 @@
       "note": "… excerpt truncated (68 lines total) — see the book for the full listing."
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/react-book",
   "videos": []
 }
 ---

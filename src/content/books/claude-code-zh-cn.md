@@ -85,7 +85,7 @@
       "code": "\n图1-2　问答式与任务式输入在内部触发的两条路径\n\n从这一节起你就可以建立这种思维：把\"问\"换成\"做\"，把\"是什么\"换成\"请你去完成什么\"。这是从对话式助手用户成长为 agentic 工具用户的第一道分水岭。\n\n## 1.3　六种官方入口选型\n\nClaude Code 的底层引擎在所有入口上都一样——同一个模型、同一套工具、同一份调用约定<!-- src:kp-001-02,official_doc -->。你看到的终端、桌面、IDE 插件之间的差异，只是\"操作面\"的差异，不是\"能力本质\"的差异<!-- src:kp-001-02,official_doc -->。\n\n表1-3　Claude Code 的六类官方入口\n\n| 入口 | 适合场景 | 它特别擅长什么 |\n|---|---|---|\n| 终端 CLI | 终端原生工作流、脚本化、远程服务器 | 全部功能；Agent SDK、第三方模型供应商只在 CLI 上有<!-- src:kp-001-02,official_doc --> |\n| 桌面 App | 可视化审阅、并行多会话 | diff 查看器、应用内预览<!-- src:kp-001-02,official_doc --> |\n| VS Code 插件 | 不离开 VS Code 完成所有事情 | 内联 diff、集成终端、文件上下文同步<!-- src:kp-001-02,official_doc --> |\n| JetBrains 插件 | IntelliJ / PyCharm / WebStorm 用户 | diff 查看器、当前选区共享<!-- src:kp-001-02,official_doc --> |\n| Web | 长时间无人值守任务 | 跑在 Anthropic 云端，断开连接也接着干<!-- src:kp-001-02,official_doc --> |\n| Mobile | 不在电脑前时监控任务 | iOS / Android Claude App，配合 Remote Control 驱动电脑会话<!-- src:kp-001-02,official_doc --> |\n\n记住一句话：**CLI 是最完整的平台**<!-- src:kp-001-02,official_doc -->。脚本化、`-p` 非交互模式、Agent SDK 这些只有 CLI 上才有。本书绝大多数操作都以 CLI 为例，你在其他入口上也能照做。\n\n一个关键事实：**`CLAUDE.md`、`settings`、MCP 服务器在本地各入口之间共享**<!-- src:kp-001-02,official_doc -->。你在 CLI 里写好的配置，打开 VS Code 插件后立刻生效。但 Web 跑在 Anthropic 云端，**它读不到你本地的 `CLAUDE.md` 和 MCP 配置**——这是后面选择\"什么时候用 Web\"时最容易踩的坑<!-- src:kp-001-02,official_doc -->。\n\n```mermaid\nflowchart TB\n    subgraph Engine[同一个引擎]\n        CFG[CLAUDE.md / settings / MCP 配置]\n    end\n    CLI[终端 CLI] --- CFG\n    DT[桌面 App] --- CFG\n    VS[VS Code 插件] --- CFG\n    JB[JetBrains 插件] --- CFG\n    style CFG fill:#fff5b8"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/claude-code-book",
   "videos": [],
   "mirrorOf": "zh-tw"
 }

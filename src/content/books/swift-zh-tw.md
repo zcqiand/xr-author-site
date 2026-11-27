@@ -467,7 +467,7 @@
       "code": "\n读完这张地图，你应该能形成一条清晰的链：Mac → Xcode → Swift 工具链 + iOS SDK + Playground。以后再听到这些词，心里就有谱了。\n\n其中 Playground 是本书前二十章的主战场。它是一块交互式代码画布：你敲一行，它立刻在右边显示这行的结果，不用编译、不用等待。做完整的 iOS App 相当于带兵打一场正规演习，要排兵布阵、等部队到齐；而 Playground 是靶场，不打实战，但你在靶场把准星、后坐力摸透了，真正上战场才不会手忙脚乱。学语法最怕反馈慢，Playground 把节奏压到最快。\n\n## 1.6 在 Playground 里写下第一行代码\n\n现在打开 Xcode，在欢迎窗口选「Get started with a playground」，或菜单栏 `File → New → Playground...`。模板选 `Blank`（空白），保存到方便找到的目录，文件名可叫 `hello.playground`。\n\n在打开的 Playground 编辑区输入下面这段代码：\n\n```swift {title=\"代码清单1-1: Playground 中的第一个 Hello World\"}\nimport Foundation\n\nprint(\"Hello, World!\")\nprint(\"我正在学习 Swift 6.2\")"
     }
   ],
-  "caseRepo": "",
+  "caseRepo": "https://github.com/zcqiand/swift-book",
   "videos": []
 }
 ---
