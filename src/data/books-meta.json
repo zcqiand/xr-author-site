@@ -414,7 +414,7 @@
     },
     {
       "slug": "kotlin",
-      "series": "frontend",
+      "series": "backend",
       "sourceDir": "xr-know-020",
       "editions": [
         {
