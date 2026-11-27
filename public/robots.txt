@@ -1,0 +1,51 @@
+# xr-author-site — public promotional site for Xiangru Nanrong's books.
+# AI crawlers are explicitly WELCOME (GEO site): we want LLM indexes to cite these pages.
+
+User-agent: *
+Allow: /
+
+# --- AI / LLM crawlers: explicitly allowed ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- conventional search engines ---
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://author.xiangru.uk/sitemap-index.xml

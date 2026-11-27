@@ -1,0 +1,11 @@
+---
+import TopicPage from '../../components/pages/TopicPage.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const topics = await getCollection('topics', (e) => e.data.lang === 'en');
+  return topics.map((tp) => ({ params: { slug: tp.data.slug } }));
+}
+const { slug } = Astro.params;
+---
+<TopicPage lang="en" slug={slug!} />

@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import authorData from '../../data/author.json';
+import faqData from '../../data/faqs.json';
+import {
+  t,
+  langPath,
+  hreflangCode,
+  amazonUrl,
+  SITE_URL,
+  type Lang,
+} from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+const { lang, slug } = Astro.props;
+const ui = t(lang);
+
+const all = await getCollection('books', (e) => e.data.lang === lang);
+const book = all.find((e) => e.data.slug === slug);
+if (!book) {
+  throw new Error(`Book not found: ${slug}.${lang}`);
+}
+const d = book.data;
+// FAQ：生成件 frontmatter 优先，回落到 faqs.json（zh-cn 无自撰条目，回落 zh-tw）
+const fallbackFaq = faqData[slug]?.[lang] ?? faqData[slug]?.['zh-tw'] ?? [];
+const faq = d.faq.length > 0 ? d.faq : fallbackFaq;
+const name = authorData.name[lang as keyof typeof authorData.name] as string;
+const buyUrl = amazonUrl(d.asin, d.market);
+const title = `${d.title} — ${ui.siteName}`;
+const description = d.description || d.subtitle || d.title;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  alternateName: authorData.name.en,
+  description: authorData.bio[lang as keyof typeof authorData.bio] as string,
+  sameAs: authorData.sameAs.length > 0 ? authorData.sameAs : undefined,
+};
+
+const bookSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: d.title,
+  alternativeHeadline: d.subtitle || undefined,
+  description,
+  author: personSchema,
+  inLanguage: hreflangCode[lang],
+  bookFormat: 'https://schema.org/EBook',
+  url: buyUrl,
+  image: d.cover ? new URL(d.cover, SITE_URL).href : undefined,
+  publisher: { '@type': 'Organization', name: 'Independently published' },
+};
+
+const faqSchema = faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null;
+
+const jsonLd = faqSchema ? [bookSchema, faqSchema, personSchema] : [bookSchema, personSchema];
+---
+<BaseLayout lang={lang} title={title} description={description} path={`/books/${slug}/`} jsonLd={jsonLd}>
+  <article>
+    <h1>{d.title}</h1>
+    {d.subtitle && <p class="muted"><strong>{d.subtitle}</strong></p>}
+    <p>
+      <a class="btn" href={buyUrl} rel="noopener">{ui.buy}</a>
+      {d.onSale === false && <p class="muted">{ui.zhCnNote}</p>}
+    </p>
+
+    {d.cover && <img src={d.cover} alt={`Cover: ${d.title}`} width="320" loading="lazy" />}
+
+    {d.description && (
+      <section aria-labelledby="about-h">
+        <h2 id="about-h">{ui.whoFor}</h2>
+        <p>{d.description}</p>
+      </section>
+    )}
+
+    {d.toc.length > 0 && (
+      <section aria-labelledby="toc-h">
+        <h2 id="toc-h">{ui.toc}</h2>
+        {d.toc.map((sec) => (
+          <section>
+            <h3>{sec.part}</h3>
+            <ol>
+              {sec.items.map((item) => <li>{item}</li>)}
+            </ol>
+          </section>
+        ))}
+      </section>
+    )}
+
+    {d.sample.length > 0 && (
+      <section aria-labelledby="sample-h">
+        <h2 id="sample-h">{ui.sample}</h2>
+        {d.sample.map((s) => (
+          <div>
+            <h3>{s.heading}</h3>
+            <pre><code>{s.code}</code></pre>
+            {s.note && <p class="muted">{s.note}</p>}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {faq.length > 0 && (
+      <section aria-labelledby="faq-h">
+        <h2 id="faq-h">{ui.faq}</h2>
+        {faq.map((f) => (
+          <section>
+            <h3>{f.question}</h3>
+            <p>{f.answer}</p>
+          </section>
+        ))}
+      </section>
+    )}
+
+    {(d.caseRepo || d.videos.length > 0) && (
+      <section aria-labelledby="resources-h">
+        <h2 id="resources-h">{ui.resources}</h2>
+        <ul>
+          {d.caseRepo && (
+            <li>
+              <a href={d.caseRepo} rel="noopener">{ui.caseRepo}</a>
+            </li>
+          )}
+          {d.videos.map((v) => (
+            <li>
+              <a href={v.url} rel="noopener">{v.title || ui.watchVideo}（{v.platform}）</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <p>
+      <a href={langPath(lang, '/books/')}>← {ui.viewAllBooks}</a>
+    </p>
+  </article>
+</BaseLayout>

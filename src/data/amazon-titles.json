@@ -1,0 +1,90 @@
+{
+  "ai-agents-zh-tw": {
+    "title": "AI智慧體從入門到專案實踐",
+    "subtitle": "基於 LangChain + LangGraph 的生產級 AI 應用開發指南"
+  },
+  "android-zh-tw": {
+    "title": "Android 從入門到專案實踐",
+    "subtitle": "Jetpack Compose + Material 3，零基礎直達兩個企業級真實專案"
+  },
+  "aspnet-core-zh-tw": {
+    "title": "ASP.NET Core 從入門到專案實踐",
+    "subtitle": ".NET 8 LTS 全景實戰：兩個真實專案貫穿，每章程式碼可執行"
+  },
+  "claude-code-en": {
+    "title": "Claude Code: From Beginner to Project Practice",
+    "subtitle": "The Complete Workflow from First Commands to Collaborative Delivery"
+  },
+  "claude-code-ja": {
+    "title": "Claude Code 入門からプロジェクト実践へ",
+    "subtitle": "コマンド入門から協業納品までの完全なワークフロー AI"
+  },
+  "claude-code-zh-tw": {
+    "title": "Claude Code 從入門到專案實踐",
+    "subtitle": "從命令入門到 RPG 與財務系統雙專案交付"
+  },
+  "codex-en": {
+    "title": "Codex: From Beginner to Project Practice",
+    "subtitle": "Master Open-Source Agentic Coding — from Fundamentals to Production-Grade Projects"
+  },
+  "codex-ja": {
+    "title": "Codex 入門からプロジェクト実践へ",
+    "subtitle": "オープンソースのエージェント型コーディングを習得する：基礎から本番レベルのプロジェクトまで AI"
+  },
+  "codex-zh-tw": {
+    "title": "Codex 從入門到專案實踐",
+    "subtitle": "掌握開源代理式編碼：從基礎到生產級專案"
+  },
+  "flutter-zh-tw": {
+    "title": "Flutter 從入門到專案實踐",
+    "subtitle": "基於 Flutter 3.4x stable 與 Dart 3 的專案實戰教程，配兩個可執行的企業級案例倉"
+  },
+  "kotlin-zh-tw": {
+    "title": "Kotlin 從入門到專案實踐",
+    "subtitle": "Kotlin 2.4（K2 編譯器）+ Ktor 3 全路徑教程，從零基礎到雙企業級案例倉"
+  },
+  "nextjs-zh-tw": {
+    "title": "Next.js 從入門到專案實戰",
+    "subtitle": "全棧 Web 開發指南 | 基於 Next.js 15.x 與 React 19.x"
+  },
+  "opencode-zh-tw": {
+    "title": "OpenCode 從入門到專案實踐",
+    "subtitle": "首本覆蓋 v2 的模型無關開源 AI 程式設計，雙 Next.js 15 實戰直上可部署 SaaS"
+  },
+  "pi-zh-tw": {
+    "title": "Pi 從入門到專案實踐: 用開源 Pi 走通‘用→改→嵌’",
+    "subtitle": "從終端 AI 程式設計日常，到定製擴充套件、嵌入生產與 CI，雙真實全棧倉收官"
+  },
+  "postgresql-zh-tw": {
+    "title": "PostgreSQL DBA 實戰",
+    "subtitle": "從開發到資料庫專家的轉型指南: MySQL對比式學習 + 兩大生產項目，掌握生產級DBA能力"
+  },
+  "react-en": {
+    "title": "React: From Beginner to Project Practice",
+    "subtitle": "A Complete Guide to Modern Front-End Development with React 19 + TypeScript"
+  },
+  "react-ja": {
+    "title": "React 基礎からプロジェクト実践まで",
+    "subtitle": "React 19 + TypeScript によるモダンフロントエンド開発 完全ガイド"
+  },
+  "react-zh-tw": {
+    "title": "React從入門到專案實踐",
+    "subtitle": "基於 React 19 + TypeScript 的現代前端開發完全指南"
+  },
+  "ruby-zh-tw": {
+    "title": "Ruby從入門到專案實踐",
+    "subtitle": "兩個真實專案，從零基礎到生產級 Rails 工程"
+  },
+  "spring-boot-zh-tw": {
+    "title": "Spring Boot 從入門到專案實踐",
+    "subtitle": "掌握 Spring Boot 3.x + Java 21企業級開發：從自動設定到生產級多租戶架構b"
+  },
+  "swift-zh-tw": {
+    "title": "Swift從入門到專案實踐",
+    "subtitle": "語言基礎 × 2 個完整可上架 App"
+  },
+  "vue-zh-tw": {
+    "title": "Vue從入門到專案實踐",
+    "subtitle": "Vue 3.5 × TypeScript 全程 —— 零基礎走完從文法到兩個企業級實戰"
+  }
+}

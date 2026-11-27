@@ -1,0 +1,10 @@
+---
+import BooksIndex from '../../../components/pages/BooksIndex.astro';
+import { locales } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return locales.filter((l) => l !== 'en').map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+<BooksIndex lang={lang as any} />

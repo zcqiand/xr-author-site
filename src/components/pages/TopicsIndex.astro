@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { t, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const topics = await getCollection('topics', (e) => e.data.lang === lang);
+const title = `${ui.nav.topics} — ${ui.siteName}`;
+---
+<BaseLayout lang={lang} title={title} description={ui.nav.topics} path="/topics/">
+  <h1>{ui.nav.topics}</h1>
+  <ul>
+    {topics.map((tp) => (
+      <li>
+        <a href={`./${tp.data.slug}/`}>{tp.data.title}</a>
+        <p class="muted">{tp.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

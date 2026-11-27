@@ -1,0 +1,11 @@
+---
+import BookPage from '../../components/pages/BookPage.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books', (e) => e.data.lang === 'en');
+  return books.map((b) => ({ params: { slug: b.data.slug } }));
+}
+const { slug } = Astro.params;
+---
+<BookPage lang="en" slug={slug!} />

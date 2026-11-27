@@ -1,0 +1,18 @@
+---
+import TopicPage from '../../../components/pages/TopicPage.astro';
+import { getCollection } from 'astro:content';
+import { locales, type Lang } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const topics = await getCollection('topics');
+  const paths: Array<{ params: { lang: string; slug: string } }> = [];
+  for (const lang of locales.filter((l) => l !== 'en')) {
+    for (const tp of topics.filter((e) => e.data.lang === lang)) {
+      paths.push({ params: { lang, slug: tp.data.slug } });
+    }
+  }
+  return paths;
+}
+const { lang, slug } = Astro.params;
+---
+<TopicPage lang={lang as Lang} slug={slug!} />

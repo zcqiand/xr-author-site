@@ -1,0 +1,10 @@
+---
+import SeriesIndex from '../../../components/pages/SeriesIndex.astro';
+import { locales } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return locales.filter((l) => l !== 'en').map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+<SeriesIndex lang={lang as any} />

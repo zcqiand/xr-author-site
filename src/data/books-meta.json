@@ -1,0 +1,202 @@
+{
+  "$comment": "书目 SSOT：ASIN / 系列归属 / 知识库源目录。导入脚本 scripts/import-books.mjs 消费此文件批量生成 src/content/books/。lang 取值 en|ja|zh-tw|zh-cn；market 为 amazon 域后缀（com|co.jp）；subdir 为知识库仓内译版子目录（空=根目录即繁中正文）；onSale=false 表示该语言区无在架 listing，购买链接指向 mirrorOf 指定的版本。",
+  "series": [
+    {
+      "id": "ai-agents",
+      "name": {
+        "en": "AI & Agentic Development Series",
+        "ja": "AI・エージェント開発シリーズ",
+        "zh-tw": "AI 與智慧代理開發系列",
+        "zh-cn": "AI 与智能体开发系列"
+      },
+      "description": {
+        "en": "Hands-on guides to AI coding agents — Claude Code, OpenAI Codex, OpenCode, and AI agent architecture.",
+        "ja": "AIコーディングエージェントの実践ガイド — Claude Code、OpenAI Codex、OpenCode、AIエージェント設計。",
+        "zh-tw": "AI 編碼代理實戰指南——Claude Code、OpenAI Codex、OpenCode 與智慧代理架構。",
+        "zh-cn": "AI 编码代理实战指南——Claude Code、OpenAI Codex、OpenCode 与智能代理架构。"
+      }
+    },
+    {
+      "id": "backend",
+      "name": {
+        "en": "Backend Development Series",
+        "ja": "バックエンド開発シリーズ",
+        "zh-tw": "後端開發系列",
+        "zh-cn": "后端开发系列"
+      },
+      "description": {
+        "en": "Server-side engineering: Spring Boot, PostgreSQL, Ruby, ASP.NET Core, and Raspberry Pi projects.",
+        "ja": "サーバーサイド開発：Spring Boot、PostgreSQL、Ruby、ASP.NET Core、Raspberry Pi。",
+        "zh-tw": "伺服器端工程：Spring Boot、PostgreSQL、Ruby、ASP.NET Core 與 Raspberry Pi 實作。",
+        "zh-cn": "服务器端工程：Spring Boot、PostgreSQL、Ruby、ASP.NET Core 与 Raspberry Pi 实战。"
+      }
+    },
+    {
+      "id": "frontend",
+      "name": {
+        "en": "Frontend & Client Development Series",
+        "ja": "フロントエンド・クライアント開発シリーズ",
+        "zh-tw": "前端與客戶端開發系列",
+        "zh-cn": "前端与客户端开发系列"
+      },
+      "description": {
+        "en": "Modern UI engineering: React, Next.js, Vue, Flutter, Swift, Kotlin, and Android.",
+        "ja": "モダンUI開発：React、Next.js、Vue、Flutter、Swift、Kotlin、Android。",
+        "zh-tw": "現代 UI 工程：React、Next.js、Vue、Flutter、Swift、Kotlin 與 Android。",
+        "zh-cn": "现代 UI 工程：React、Next.js、Vue、Flutter、Swift、Kotlin 与 Android。"
+      }
+    }
+  ],
+  "books": [
+    {
+      "slug": "claude-code",
+      "series": "ai-agents",
+      "sourceDir": "xr-know-002",
+      "editions": [
+        { "lang": "en", "asin": "B0HR5ZVRB3", "market": "com", "subdir": "en", "onSale": true },
+        { "lang": "ja", "asin": "B0HR5RXSN5", "market": "co.jp", "subdir": "ja", "onSale": true },
+        { "lang": "zh-tw", "asin": "B0H3M3B8GG", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H3M3B8GG", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "react",
+      "series": "frontend",
+      "sourceDir": "xr-know-001",
+      "editions": [
+        { "lang": "en", "asin": "B0HS1FHJ64", "market": "com", "subdir": "en", "onSale": true },
+        { "lang": "ja", "asin": "B0HS1247NS", "market": "co.jp", "subdir": "ja", "onSale": true },
+        { "lang": "zh-tw", "asin": "B0H5DGZM5B", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H5DGZM5B", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "codex",
+      "series": "ai-agents",
+      "sourceDir": "xr-know-003",
+      "editions": [
+        { "lang": "en", "asin": "B0HSLZWJRV", "market": "com", "subdir": "en", "onSale": true },
+        { "lang": "ja", "asin": "B0HSLVJW73", "market": "co.jp", "subdir": "ja", "onSale": true },
+        { "lang": "zh-tw", "asin": "B0H3781RB9", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H3781RB9", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "nextjs",
+      "series": "frontend",
+      "sourceDir": "xr-know-004",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H32SXR49", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H32SXR49", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "spring-boot",
+      "series": "backend",
+      "sourceDir": "xr-know-006",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H3Y8YPWK", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H3Y8YPWK", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "postgresql",
+      "series": "backend",
+      "sourceDir": "xr-know-007",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H4WP4QK5", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H4WP4QK5", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "ai-agents",
+      "series": "ai-agents",
+      "sourceDir": "xr-know-015",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H3LX9N21", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H3LX9N21", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "vue",
+      "series": "frontend",
+      "sourceDir": "xr-know-011",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H5XHQFK2", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H5XHQFK2", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "ruby",
+      "series": "backend",
+      "sourceDir": "xr-know-012",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H6BYXJXB", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H6BYXJXB", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "swift",
+      "series": "frontend",
+      "sourceDir": "xr-know-013",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0H66TK2FF", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0H66TK2FF", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "aspnet-core",
+      "series": "backend",
+      "sourceDir": "xr-know-016",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HLV92JV4", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HLV92JV4", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "pi",
+      "series": "backend",
+      "sourceDir": "xr-know-017",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HNN6NKXX", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HNN6NKXX", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "opencode",
+      "series": "ai-agents",
+      "sourceDir": "xr-know-018",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HMP3BLT2", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HMP3BLT2", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "flutter",
+      "series": "frontend",
+      "sourceDir": "xr-know-019",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HP83QH4L", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HP83QH4L", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "kotlin",
+      "series": "frontend",
+      "sourceDir": "xr-know-020",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HQ16BN7L", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HQ16BN7L", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    },
+    {
+      "slug": "android",
+      "series": "frontend",
+      "sourceDir": "xr-know-021",
+      "editions": [
+        { "lang": "zh-tw", "asin": "B0HPZZRMXR", "market": "com", "subdir": "", "onSale": true },
+        { "lang": "zh-cn", "asin": "B0HPZZRMXR", "market": "com", "subdir": "", "onSale": false, "mirrorOf": "zh-tw" }
+      ]
+    }
+  ]
+}

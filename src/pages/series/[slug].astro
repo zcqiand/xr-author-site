@@ -1,0 +1,10 @@
+---
+import SeriesPage from '../../components/pages/SeriesPage.astro';
+import seriesData from '../../data/books-meta.json';
+
+export function getStaticPaths() {
+  return (seriesData.series as Array<{ id: string }>).map((s) => ({ params: { slug: s.id } }));
+}
+const { slug } = Astro.params;
+---
+<SeriesPage lang="en" seriesId={slug!} />

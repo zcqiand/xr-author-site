@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import seriesData from '../../data/books-meta.json';
+import { t, langPath, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+type SeriesEntry = (typeof seriesData.series)[number];
+const series = seriesData.series as SeriesEntry[];
+---
+<BaseLayout lang={lang} title={`${ui.nav.series} — ${ui.siteName}`} description={ui.nav.series} path="/series/">
+  <h1>{ui.nav.series}</h1>
+  <ul>
+    {series.map((s) => (
+      <li>
+        <a href={langPath(lang, `/series/${s.id}/`)}>{s.name[lang as keyof typeof s.name]}</a>
+        <p class="muted">{s.description[lang as keyof typeof s.description]}</p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

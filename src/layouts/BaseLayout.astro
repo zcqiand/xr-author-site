@@ -1,0 +1,132 @@
+---
+import JsonLd from '../components/JsonLd.astro';
+import {
+  locales,
+  t,
+  langPath,
+  hreflangCode,
+  htmlLang,
+  langNames,
+  SITE_URL,
+  type Lang,
+} from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** 当前语言区内的规范路径，如 /books/claude-code/（不带语言前缀） */
+  path: string;
+  jsonLd?: Record<string, unknown>[];
+  ogType?: 'website' | 'article';
+}
+
+const { lang, title, description, path, jsonLd = [], ogType = 'website' } = Astro.props;
+const ui = t(lang);
+const canonical = new URL(langPath(lang, path), Astro.site ?? SITE_URL).href;
+const alternates = locales.map((l) => ({
+  code: hreflangCode[l],
+  href: new URL(langPath(l, path), SITE_URL).href,
+}));
+const xDefault = new URL(path, SITE_URL).href;
+---
+<!doctype html>
+<html lang={htmlLang[lang]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.code} href={a.href} />)}
+    <link rel="alternate" hreflang="x-default" href={xDefault} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={ui.siteName} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        <a class="brand" href={langPath(lang, '/')}>{ui.siteName}</a>
+        <ul>
+          <li><a href={langPath(lang, '/books/')}>{ui.nav.books}</a></li>
+          <li><a href={langPath(lang, '/topics/')}>{ui.nav.topics}</a></li>
+          <li><a href={langPath(lang, '/series/')}>{ui.nav.series}</a></li>
+        </ul>
+        <details class="lang-switcher">
+          <summary>{langNames[lang]}</summary>
+          <ul>
+            {locales.map((l) => (
+              <li>
+                <a
+                  href={langPath(l, path)}
+                  hreflang={hreflangCode[l]}
+                  aria-current={l === lang ? 'true' : undefined}
+                >{langNames[l]}</a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© 2026 Xiangru Nanrong</p>
+      <nav aria-label="Footer">
+        <a href={langPath(lang, '/books/')}>{ui.nav.books}</a>
+        <a href={langPath(lang, '/topics/')}>{ui.nav.topics}</a>
+        <a href={langPath(lang, '/series/')}>{ui.nav.series}</a>
+      </nav>
+    </footer>
+    {jsonLd.map((schema) => <JsonLd data={schema} />)}
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #fdfdfb;
+    --accent: #0f62fe;
+    --muted: #555;
+    --border: #ddd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans CJK TC', 'Noto Sans CJK SC', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+  }
+  header { border-bottom: 1px solid var(--border); }
+  nav { max-width: 60rem; margin: 0 auto; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  nav ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+  .brand { font-weight: 700; text-decoration: none; color: var(--ink); }
+  nav a { color: var(--ink); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  .lang-switcher { margin-left: auto; }
+  .lang-switcher summary { cursor: pointer; }
+  .lang-switcher ul { flex-direction: column; position: absolute; background: var(--paper); border: 1px solid var(--border); padding: 0.5rem 1rem; }
+  main { max-width: 60rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+  footer { border-top: 1px solid var(--border); padding: 1rem; color: var(--muted); text-align: center; }
+  footer nav { display: inline-flex; gap: 1rem; }
+  h1 { font-size: 1.9rem; line-height: 1.3; }
+  .muted { color: var(--muted); }
+  .btn {
+    display: inline-block; padding: 0.5rem 1.25rem; background: var(--accent);
+    color: #fff !important; text-decoration: none; border-radius: 6px; font-weight: 600;
+  }
+  .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1.25rem; padding: 0; list-style: none; }
+  .book-card img { width: 100%; border: 1px solid var(--border); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid var(--border); padding: 0.4rem 0.75rem; text-align: left; }
+  pre { background: #f4f4f8; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  code { font-family: ui-monospace, Consolas, 'Cascadia Mono', monospace; }
+</style>

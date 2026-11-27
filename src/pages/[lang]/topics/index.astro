@@ -1,0 +1,10 @@
+---
+import TopicsIndex from '../../../components/pages/TopicsIndex.astro';
+import { locales } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return locales.filter((l) => l !== 'en').map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+<TopicsIndex lang={lang as any} />

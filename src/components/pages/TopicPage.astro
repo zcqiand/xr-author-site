@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+import { t, langPath, SITE_URL, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+const { lang, slug } = Astro.props;
+const ui = t(lang);
+
+const entry = await getEntry('topics', `${slug}-${lang}`);
+if (!entry) {
+  throw new Error(`Topic not found: ${slug}.${lang}`);
+}
+const { Content } = await render(entry);
+const { title, description } = entry.data;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  inLanguage: lang === 'zh-tw' ? 'zh-TW' : lang === 'zh-cn' ? 'zh-CN' : lang,
+  author: { '@type': 'Person', name: 'Xiangru Nanrong' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/topics/${slug}/` },
+};
+---
+<BaseLayout lang={lang} title={`${title} — ${ui.siteName}`} description={description} path={`/topics/${slug}/`} ogType="article" jsonLd={[articleSchema]}>
+  <article>
+    <h1>{title}</h1>
+    <Content />
+    <p><a href={langPath(lang, '/topics/')}>← {ui.nav.topics}</a></p>
+  </article>
+</BaseLayout>

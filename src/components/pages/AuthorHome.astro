@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookCard from '../BookCard.astro';
+import { getCollection } from 'astro:content';
+import authorData from '../../data/author.json';
+import { t, langPath, hreflangCode, siteUrl, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const books = await getCollection('books', (e) => e.data.lang === lang);
+const bio = authorData.bio[lang as keyof typeof authorData.bio] as string;
+const name = authorData.name[lang as keyof typeof authorData.name] as string;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  alternateName: authorData.name.en,
+  url: siteUrl('/'),
+  description: bio,
+  sameAs: authorData.sameAs.length > 0 ? authorData.sameAs : undefined,
+  knowsAbout: [
+    'Claude Code', 'OpenAI Codex', 'agentic coding', 'React', 'Next.js', 'Vue',
+    'Spring Boot', 'PostgreSQL', 'Flutter', 'Android',
+  ],
+};
+---
+<BaseLayout lang={lang} title={ui.siteName} description={bio} path="/" jsonLd={[personSchema]}>
+  <h1>{name}</h1>
+  <p>{bio}</p>
+
+  <section aria-labelledby="books-h">
+    <h2 id="books-h">{ui.viewAllBooks}</h2>
+    <ul class="book-grid">
+      {books.map((b) => <BookCard lang={lang} book={b.data} />)}
+    </ul>
+    <p><a href={langPath(lang, '/books/')}>{ui.viewAllBooks}</a></p>
+  </section>
+
+  {authorData.sameAs.length > 0 && (
+    <section aria-labelledby="elsewhere-h">
+      <h2 id="elsewhere-h">{ui.elsewhere}</h2>
+      <ul>
+        {authorData.sameAs.map((url) => (
+          <li><a href={url} rel="noopener">{url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+</BaseLayout>

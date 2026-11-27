@@ -1,0 +1,13 @@
+---
+import SeriesPage from '../../../components/pages/SeriesPage.astro';
+import seriesData from '../../../data/books-meta.json';
+import { locales, type Lang } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return (seriesData.series as Array<{ id: string }>).flatMap((s) =>
+    locales.filter((l) => l !== 'en').map((lang) => ({ params: { lang, slug: s.id } }))
+  );
+}
+const { lang, slug } = Astro.params;
+---
+<SeriesPage lang={lang as Lang} seriesId={slug!} />

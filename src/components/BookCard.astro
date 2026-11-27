@@ -1,0 +1,25 @@
+---
+import { t, langPath, type Lang } from '../i18n/utils';
+
+interface BookLite {
+  slug: string;
+  title: string;
+  subtitle: string;
+  cover: string;
+}
+
+interface Props {
+  lang: Lang;
+  book: BookLite;
+}
+
+const { lang, book } = Astro.props;
+const ui = t(lang);
+---
+<li class="book-card">
+  <a href={langPath(lang, `/books/${book.slug}/`)}>
+    {book.cover && <img src={book.cover} alt={`Cover: ${book.title}`} loading="lazy" />}
+    <h3>{book.title}</h3>
+    {book.subtitle && <p class="muted">{book.subtitle}</p>}
+  </a>
+</li>

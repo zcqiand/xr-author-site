@@ -1,0 +1,18 @@
+---
+import BookPage from '../../../components/pages/BookPage.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { locales, type Lang } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  const paths: Array<{ params: { lang: string; slug: string } }> = [];
+  for (const lang of locales.filter((l) => l !== 'en')) {
+    for (const b of books.filter((e) => e.data.lang === lang)) {
+      paths.push({ params: { lang, slug: b.data.slug } });
+    }
+  }
+  return paths;
+}
+const { lang, slug } = Astro.params;
+---
+<BookPage lang={lang as Lang} slug={slug!} />

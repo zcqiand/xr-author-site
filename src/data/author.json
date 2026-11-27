@@ -1,0 +1,19 @@
+{
+  "$comment": "作者实体数据（GEO 作者锚点）。sameAs=矩阵推广接线：GitHub/YouTube/Bilibili/Amazon 作者页，待 URL 后填入；Person.sameAs 让引擎合并四处实体。",
+  "name": {
+    "en": "Xiangru Nanrong",
+    "ja": "南栄相如（Xiangru Nanrong）",
+    "zh-tw": "南榮相如",
+    "zh-cn": "南荣相如"
+  },
+  "sameAs": [
+    "https://www.amazon.com/author/xiangru",
+    "https://github.com/zcqiand"
+  ],
+  "bio": {
+    "en": "Xiangru Nanrong is an independent technical author on Amazon Kindle. He writes practical, project-driven books on AI coding agents and modern software engineering — from Claude Code and OpenAI Codex to React, Spring Boot, PostgreSQL, and beyond. Every book in his catalog walks from first principles to a real, runnable project: no toy examples, no abandoned half-demos. The AI & Agentic Development series teaches engineers to deliver complete projects *with* an AI agent — specification, implementation, review, and deployment — while the frontend and backend series cover the full modern stack in the same two-projects-per-book format. Books are published in English, Japanese, and Traditional Chinese editions.",
+    "ja": "Xiangru Nanrong（南栄相如）は、Amazon Kindle で技術書を自出版する著者です。Claude Code や OpenAI Codex といった AI コーディングエージェントから、React・Spring Boot・PostgreSQL などのモダンなソフトウェア開発まで、「原理から動くプロジェクトまで」を一冊で通貫する実践派の書籍を執筆しています。おもちゃのサンプルではなく、読後に実際に動く 2 つのプロジェクトが各書に組み込まれています。英語版・日本語版・繁体字中国語版で出版。",
+    "zh-tw": "南榮相如是 Amazon Kindle 自出版技術書作者，筆觸橫跨 AI 編碼代理（Claude Code、OpenAI Codex、OpenCode）與現代軟體工程（React、Next.js、Vue、Spring Boot、PostgreSQL、Flutter、Android 等）。每本書都從原理講到可執行的真實專案——不用玩具範例，每書內建兩個完整專案，讀完即可交付。代表作為「AI 與智慧代理開發系列」，教工程師與 AI 代理協同完成規約、實作、審查到部署的完整交付流程。作品以繁體中文、英文、日文三語出版。",
+    "zh-cn": "南荣相如是 Amazon Kindle 自出版技术书作者，写作横跨 AI 编码代理（Claude Code、OpenAI Codex、OpenCode）与现代软件工程（React、Next.js、Vue、Spring Boot、PostgreSQL、Flutter、Android 等）。每本书都从原理讲到可运行的真实项目——不用玩具示例，每书内建两个完整项目，读完即可交付。代表作「AI 与智能体开发系列」，教工程师与 AI 代理协同完成从规约、实现、审查到部署的完整交付流程。作品以繁体中文、英文、日文三语出版。"
+  }
+}
