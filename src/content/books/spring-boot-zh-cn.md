@@ -3,12 +3,12 @@
   "slug": "spring-boot",
   "lang": "zh-cn",
   "title": "Spring Boot 從入門到專案實踐",
-  "subtitle": "掌握 Spring Boot 3.x + Java 21企業級開發：從自動設定到生產級多租戶架構b",
+  "subtitle": "掌握 Spring Boot 3.x + Java 21企業級開發：從自動配置到生產級多租戶架構",
   "series": "backend",
   "asin": "B0H3Y8YPWK",
   "market": "com",
   "onSale": false,
-  "cover": "/covers/spring-boot-zh-cn.png",
+  "cover": "/covers/spring-boot-zh-cn.jpg",
   "description": "在 2024 年的一个企业级项目中，我们需要将一个传统的 Spring MVC 应用逐步迁移到 Spring Boot 3.x。项目不大，但踩的坑不少：自动配置不生效、ComponentScan 边界问题、事务传播行为踩坑、Docker 容器化后连接池配置失效……每个问题都花了几个小时甚至几天才解决。 这些问题的根源在于：市面上的 Spring Boot 书籍大多基于2.x 版本编写，而 Spring Boot 3.x 带来了革命性的变化——Java 17+ 成为底线、Java 21 成为主流、Spring Framework 6.x 带来了新的注解和配置方式、虚拟线程等新特性正在改变我们编写并发代码的方式。 这本书，就是我踩过这些坑之后的经验总结。",
   "faq": [],
   "toc": [],
@@ -30,7 +30,7 @@
   "mirrorOf": "zh-tw"
 }
 ---
-> Spring Boot 從入門到專案實踐 — 掌握 Spring Boot 3.x + Java 21企業級開發：從自動設定到生產級多租戶架構b
+> Spring Boot 從入門到專案實踐 — 掌握 Spring Boot 3.x + Java 21企業級開發：從自動配置到生產級多租戶架構
 
 (Detailed page content is filled in the content batch.)
 

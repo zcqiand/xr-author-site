@@ -77,7 +77,8 @@
   },
   "spring-boot-zh-tw": {
     "title": "Spring Boot 從入門到專案實踐",
-    "subtitle": "掌握 Spring Boot 3.x + Java 21企業級開發：從自動設定到生產級多租戶架構b"
+    "subtitle": "掌握 Spring Boot 3.x + Java 21企業級開發：從自動配置到生產級多租戶架構",
+    "source": "knowledge-suite xr-know-006/01书籍封面.md（simp->trad），用户 2026-11-27 指定改源"
   },
   "swift-zh-tw": {
     "title": "Swift從入門到專案實踐",
