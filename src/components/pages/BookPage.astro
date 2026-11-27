@@ -133,9 +133,16 @@ const jsonLd = faqSchema ? [bookSchema, faqSchema, personSchema] : [bookSchema, 
         <ul>
           {d.caseRepo && (
             <li>
-              <a href={d.caseRepo} rel="noopener">{ui.caseRepo}</a>
+              <a href={d.caseRepo} rel="noopener">
+                {d.caseRepos.length > 0 ? ui.codeListRepo : ui.caseRepo}
+              </a>
             </li>
           )}
+          {d.caseRepos.map((r) => (
+            <li>
+              <a href={r.url} rel="noopener">{r.label}</a>
+            </li>
+          ))}
           {d.videos.map((v) => (
             <li>
               <a href={v.url} rel="noopener">{v.title || ui.watchVideo}（{v.platform}）</a>

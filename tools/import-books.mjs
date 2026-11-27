@@ -220,6 +220,7 @@ for (const book of meta.books) {
       sample: samples,
       // 矩阵推广：案例仓与配套视频（books-meta 可选字段，未填=空渲染时隐藏）
       caseRepo: book.caseRepo || '',
+      caseRepos: book.caseRepos || [],
       videos: book.videos || [],
     };
     const body = [
@@ -247,6 +248,7 @@ for (const slug of twTouched) {
   if (!existsSync(p)) continue;
   const { fm, body } = parseFrontmatter(readFileSync(p, 'utf8'));
   fm.description = t(fm.description);
+  for (const r of fm.caseRepos || []) r.label = t(r.label);
   for (const s of fm.sample || []) {
     s.heading = t(s.heading);
     s.code = t(s.code);

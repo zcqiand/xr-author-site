@@ -50,6 +50,8 @@ const books = defineCollection({
     sample: z.array(sampleBlock).default([]),
     /** 案例库（GitHub 配套仓）与配套视频（矩阵推广接线，空=隐藏） */
     caseRepo: z.string().default(''),
+    /** 附加真实案例仓（url+label）——caseRepo 是代码清单总仓时，真正的案例项目列这里 */
+    caseRepos: z.array(z.object({ url: z.string(), label: z.string() })).default([]),
     videos: z.array(z.object({ platform: z.string(), url: z.string(), title: z.string().optional() })).default([]),
   }),
 });

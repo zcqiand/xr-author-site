@@ -80,6 +80,20 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/ai-agent-book",
+  "caseRepos": [
+    {
+      "url": "https://github.com/zcqiand/sql-self-healer",
+      "label": "SQL 自愈 Agent 案例（动态 Schema 注入 + HITL 熔断）"
+    },
+    {
+      "url": "https://github.com/zcqiand/saas-cs-agent",
+      "label": "智能客服 Agent 案例（多租户隔离）"
+    },
+    {
+      "url": "https://github.com/zcqiand/quant-sentiment-research",
+      "label": "金融舆情投研 Agent 案例（证据链防幻觉）"
+    }
+  ],
   "videos": [],
   "mirrorOf": "zh-tw"
 }
