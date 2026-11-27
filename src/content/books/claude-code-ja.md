@@ -7,6 +7,8 @@
   "series": "ai-agents",
   "asin": "B0HR5RXSN5",
   "market": "co.jp",
+  "format": "kindle",
+  "paperbackAsin": "B0HQ785GSN",
   "onSale": true,
   "cover": "/covers/claude-code-ja.jpg",
   "description": "私はあなたにこの本を紹介できることを心から嬉しく思います。この本は、Claude Code と協業してプロジェクトを開発する方法を身につけ、真にハイパフォーマンスなエージェント型コーディング（Agentic Coding）の実践者になる助けになります。Claude Code は「次世代のコード補完ツール」ではありません。それは AI 支援ソフトウェア開発におけるパラダイムシフトを体現しています——1 行のコードの続きを書いてくれる存在から、あなたと協業してタスク全体を納品する存在へ。その能力はターミナル、IDE、SDK、API、Web など複数のエントリにまたがり、膨大なコマンド、設定項目、環境変数、権限ルール、Hook、MCP サービス、Agent SDK インターフェースが関わります。",
@@ -86,6 +88,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/claude-code-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

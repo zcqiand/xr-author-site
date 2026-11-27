@@ -212,6 +212,8 @@ for (const book of meta.books) {
       series: book.series,
       asin: ed.asin,
       market: ed.market,
+      format: ed.format || 'kindle',
+      paperbackAsin: ed.paperbackAsin,
       onSale: ed.onSale,
       cover: hasCover ? coverRel : '',
       description: stubsOnly ? '' : parseDescription(forewordMd || ''),

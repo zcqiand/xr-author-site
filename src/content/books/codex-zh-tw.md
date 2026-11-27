@@ -7,6 +7,7 @@
   "series": "ai-agents",
   "asin": "B0H3781RB9",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/codex-zh-tw.jpg",
   "description": "--- 2025 年秋天，我在一個創業公司擔任技術顧問。團隊決定全面引入 AI 編程工具來提升開發效率，他們試過 GitHub Copilot，也試過讓工程師在 ChatGPT 網頁版上調試代碼，但效果都不理想——Copilot 只能補全零散代碼片段，ChatGPT 需要手動複製粘貼，每次都得重新解釋項目上下文。後來他們發現了 OpenAI Codex，一個能直接操作文件系統、運行命令、管理 Git 的代理式編碼工具。短短兩個月，團隊的開發效率提升了 40%，但那段摸索配置、擴展機制、安全邊界的經歷充滿了彎路。這本書就是那段經歷的系統化總結——我希望其他開發者不需要重複那些踩坑的過程。",
@@ -25,6 +26,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/codex-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

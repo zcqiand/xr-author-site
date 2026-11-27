@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0H66TK2FF",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/swift-zh-cn.jpg",
   "description": "每次有人问我\"我想学 iOS 开发，看哪本书入门\"，我都很难给出一个干脆的答案。中文 Swift 图书并不少，但大多数要么是成书于 Swift 1 到 Swift 5 时代的语言语法手册，知识结构停在数年之前；要么是训练营式的知识点堆砌，章节之间缺少一根从语法到真实 App 的递进主线；要么干脆把 SwiftUI 当功能点工具书来写，一章一个组件，读者读完依旧拼不出一个完整的产品。 真正能让人从\"看懂语法\"跨越到\"做出东西\"的中文 Swift 入门书，长期是缺位的。 与此同时，技术栈本身正在进入一个难得的稳定窗口。SwiftUI 自 2019 年发布以来，经过六个大版本迭代，到 2025 年已被业内广泛视为\"走向成熟\"——稳定性、API 完整度、与 SwiftData 的协同都达到了适合系统化教学的程度。",
@@ -468,6 +469,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/swift-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

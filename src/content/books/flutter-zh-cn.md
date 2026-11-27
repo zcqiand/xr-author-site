@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0HP83QH4L",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/flutter-zh-cn.jpg",
   "description": "打开应用商店，闲鱼、飞书、蔚来这些 App 的背后都跑着同一套跨端框架；打开中文书店搜「Flutter」，你买到的大多数书却停在了 2019-2023 年的出版窗口——Provider 旧范式当主线、Material 2 写法、Skia 时代的性能口径。此后发生的整体换代，几乎没有被中文出版物接住： - 2023 年 5 月，Dart 3 发布，records 与 patterns 让这门语言正式跨入现代类型系统时代 - 2023 年 11 月，Flutter 3.16 将 Material 3 设为默认主题；2024 年 12 月，Flutter 3.",
@@ -40,6 +41,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/flutter-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

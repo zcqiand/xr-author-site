@@ -7,6 +7,7 @@
   "series": "backend",
   "asin": "B0HLV92JV4",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/aspnet-core-zh-cn.jpg",
   "description": "打开招聘网站搜「.NET」，政企、医疗 HIS、工控 MES、跨境 ERP 的岗位稳定存在；打开中文书店搜「ASP.NET Core」，你买到的大多数书却停在了 .NET Core 3.1 / .NET 5 / .NET 6 时代，那是 2020 到 2022 年的出版窗口。此后的变化没有被中文出版物接住： - .NET 8（2023 年 11 月，LTS）已经普及，跨平台彻底完成，简体市场却没有一本对应的全景实战书 - 国际公认的优秀教材《ASP.NET Core in Action》第 3 版（2023）没有简体中文版，读者只能购买约 600 元的英文原版 - 从 .NET Framework 迁移到现代 .NET 已是社区公认的职场刚需，却没有一本中文书以此为显式定位 与此同时，roadmap.",
@@ -25,6 +26,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/aspnetcore-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

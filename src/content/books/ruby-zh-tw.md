@@ -7,6 +7,7 @@
   "series": "backend",
   "asin": "B0H6BYXJXB",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/ruby-zh-tw.jpg",
   "description": "--- 我第一次接觸 Ruby，是在2018年做一個小型 Web 爬蟲項目。當時用 Python 寫了三百多行代碼，總覺得哪裡不對勁——重複的循環、分散的函數、繞來繞去的判斷。後來換成 Ruby，只用了不到一百行，代碼清晰得像在讀英語句子。 「原來編程可以這麼優雅。」 這是我對 Ruby 的第一印象，也是我想寫這本書的原因。 Ruby 是一種讓程序員快樂的語言。它的語法簡潔到極致，「一切皆對象」的設計理念貫穿始終。Ruby on Rails 更是 Web 開發的利器，GitHub、Shopify、Airbnb 這些知名產品背後都有 Rails 的身影。 但在國內，Ruby 一直被「小眾語言」的標籤困擾。中文 Ruby 書籍要麼是翻譯自日文或英文的語法手冊，要麼是內容淺顯的入門小冊子。",
@@ -25,6 +26,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/ruby-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

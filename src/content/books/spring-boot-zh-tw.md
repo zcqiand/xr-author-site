@@ -7,6 +7,7 @@
   "series": "backend",
   "asin": "B0H3Y8YPWK",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/spring-boot-zh-tw.jpg",
   "description": "在 2024 年的一個企業級項目中，我們需要將一個傳統的 Spring MVC 應用逐步遷移到 Spring Boot 3.x。項目不大，但踩的坑不少：自動配置不生效、ComponentScan 邊界問題、事務傳播行為踩坑、Docker 容器化後連接池配置失效……每個問題都花了幾個小時甚至幾天才解決。 這些問題的根源在於：市面上的 Spring Boot 書籍大多基於2.x 版本編寫，而 Spring Boot 3.x 帶來了革命性的變化——Java 17+ 成為底線、Java 21 成為主流、Spring Framework 6.x 帶來了新的註解和配置方式、虛擬線程等新特性正在改變我們編寫併發代碼的方式。 這本書，就是我踩過這些坑之後的經驗總結。",
@@ -26,6 +27,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/spring-boot-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

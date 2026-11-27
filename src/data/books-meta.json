@@ -58,14 +58,16 @@
           "asin": "B0HR5ZVRB3",
           "market": "com",
           "subdir": "en",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HQC28Q2P"
         },
         {
           "lang": "ja",
           "asin": "B0HR5RXSN5",
           "market": "co.jp",
           "subdir": "ja",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HQ785GSN"
         },
         {
           "lang": "zh-tw",
@@ -95,14 +97,16 @@
           "asin": "B0HS1FHJ64",
           "market": "com",
           "subdir": "en",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HR6C3FP6"
         },
         {
           "lang": "ja",
           "asin": "B0HS1247NS",
           "market": "co.jp",
           "subdir": "ja",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HRB53866"
         },
         {
           "lang": "zh-tw",
@@ -132,14 +136,16 @@
           "asin": "B0HSLZWJRV",
           "market": "com",
           "subdir": "en",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HS98GF79"
         },
         {
           "lang": "ja",
           "asin": "B0HSLVJW73",
           "market": "co.jp",
           "subdir": "ja",
-          "onSale": true
+          "onSale": true,
+          "paperbackAsin": "B0HS8FBQBN"
         },
         {
           "lang": "zh-tw",
@@ -164,6 +170,22 @@
       "series": "frontend",
       "sourceDir": "xr-know-004",
       "editions": [
+        {
+          "lang": "en",
+          "asin": "B0HSPF7JX4",
+          "market": "com",
+          "subdir": "en",
+          "onSale": true,
+          "format": "paperback"
+        },
+        {
+          "lang": "ja",
+          "asin": "B0HSPGGNGV",
+          "market": "co.jp",
+          "subdir": "ja",
+          "onSale": true,
+          "format": "paperback"
+        },
         {
           "lang": "zh-tw",
           "asin": "B0H32SXR49",

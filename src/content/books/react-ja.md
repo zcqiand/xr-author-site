@@ -7,6 +7,8 @@
   "series": "frontend",
   "asin": "B0HS1247NS",
   "market": "co.jp",
+  "format": "kindle",
+  "paperbackAsin": "B0HRB53866",
   "onSale": true,
   "cover": "/covers/react-ja.jpg",
   "description": "2024 年 12 月、React 19 が正式に安定版としてリリースされましたが、中国語書籍市場の反応はほぼゼロでした。 これは私が学習と教育の過程で繰り返し感じてきた断絶です。Douban 図書の React タグを開けば、目につく中国語書籍はすべて 2015〜2018 年に出版されたもので、React 15.x と 16.x のクラスコンポーネントの書き方と Redux パターンを扱っています。これらの本は当時は良いリソースでしたが、2026 年の React 19 エコシステムに置くと、サンプルコードは動かず、メンタルモデルは時代遅れで、推奨されていたアーキテクチャはとうにコミュニティに淘汰されています。中国語圏の React 学習者が直面しているのは、8 年にも及ぶバージョンの空白期間です。",
@@ -576,6 +578,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/react-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

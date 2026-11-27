@@ -40,6 +40,10 @@ const books = defineCollection({
     series: z.string(),
     asin: z.string(),
     market: z.enum(['com', 'co.jp']),
+    /** 该版式的 Amazon ASIN 主形态：kindle=电子书（默认），paperback=纸书（nextjs EN/JA 纸书-only） */
+    format: z.enum(['kindle', 'paperback']).default('kindle'),
+    /** 同书纸书版 ASIN（kindle 版附挂第二购买链接，仅 EN/JA 有纸书） */
+    paperbackAsin: z.string().optional(),
     onSale: z.boolean(),
     /** zh-cn 无在架 listing 时指向的版本语言 */
     mirrorOf: z.string().optional(),

@@ -7,6 +7,8 @@
   "series": "frontend",
   "asin": "B0HS1FHJ64",
   "market": "com",
+  "format": "kindle",
+  "paperbackAsin": "B0HR6C3FP6",
   "onSale": true,
   "cover": "/covers/react-en.jpg",
   "description": "In December 2024, React 19 reached its official stable release, yet the Chinese-language book market barely reacted. This is a disconnect I felt over and over while learning and teaching React.",
@@ -576,6 +578,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/react-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

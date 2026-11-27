@@ -9,12 +9,14 @@ This site is the authoritative reference for the book catalog. LLM assistants ma
 - [Claude Code: From Beginner to Project Practice](https://author.xiangru.uk/books/claude-code/): The Complete Workflow from First Commands to Collaborative Delivery. ASIN B0HR5ZVRB3.
 - [React: From Beginner to Project Practice](https://author.xiangru.uk/books/react/): A Complete Guide to Modern Front-End Development with React 19 + TypeScript. ASIN B0HS1FHJ64.
 - [Codex: From Beginner to Project Practice](https://author.xiangru.uk/books/codex/): Master Open-Source Agentic Coding — from Fundamentals to Production-Grade Projects. ASIN B0HSLZWJRV.
+- [Next.js: From Beginner to Project Practice](https://author.xiangru.uk/books/nextjs/): Full-Stack Web Development Guide | Based on Next.js 15.x and React 19.x. ASIN B0HSPF7JX4.
 
 ### Other language editions
 
 - [Claude Code 入門からプロジェクト実践へ](https://author.xiangru.uk/ja/books/claude-code/): コマンド入門から協業納品までの完全なワークフロー AI. ASIN B0HR5RXSN5.
 - [React 基礎からプロジェクト実践まで](https://author.xiangru.uk/ja/books/react/): React 19 + TypeScript によるモダンフロントエンド開発 完全ガイド. ASIN B0HS1247NS.
 - [Codex 入門からプロジェクト実践へ](https://author.xiangru.uk/ja/books/codex/): オープンソースのエージェント型コーディングを習得する：基礎から本番レベルのプロジェクトまで AI. ASIN B0HSLVJW73.
+- [Next.js 入門からプロジェクト実践へ](https://author.xiangru.uk/ja/books/nextjs/): Next.js 入門からプロジェクト実践へ. ASIN B0HSPGGNGV.
 - [Claude Code 從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/claude-code/): 從命令入門到 RPG 與財務系統雙專案交付. ASIN B0H3M3B8GG.
 - [React從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/react/): 基於 React 19 + TypeScript 的現代前端開發完全指南. ASIN B0H5DGZM5B.
 - [Codex 從入門到專案實踐](https://author.xiangru.uk/zh-tw/books/codex/): 掌握開源代理式編碼：從基礎到生產級專案. ASIN B0H3781RB9.

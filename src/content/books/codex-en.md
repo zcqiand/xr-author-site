@@ -7,6 +7,8 @@
   "series": "ai-agents",
   "asin": "B0HSLZWJRV",
   "market": "com",
+  "format": "kindle",
+  "paperbackAsin": "B0HS98GF79",
   "onSale": true,
   "cover": "/covers/codex-en.jpg",
   "description": "--- In the fall of 2025, I was working as a technical consultant for a startup. The team had decided to fully adopt AI coding tools to boost development productivity.",
@@ -25,6 +27,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/codex-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

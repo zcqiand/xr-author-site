@@ -7,6 +7,7 @@
   "series": "backend",
   "asin": "B0HQ16BN7L",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/kotlin-zh-cn.jpg",
   "description": "2026 年的 Kotlin，和 2018 年的 Kotlin 已经是两门不同的技术。 这是许多 Kotlin 学习者的共同处境。翻开市面现有的中文 Kotlin 图书，你大概率会遇到这样的场景： - 书里的语法示例停在 Kotlin 1.1-1.3 时代，与 2.x 编译器的行为和提示对不上 - 并发章节推荐的写法早被结构化并发取代，照着写会留下协程泄漏的隐患 - 想学服务端开发，书里却找不到任何一个现代 Kotlin Web 框架的完整项目 - 代码片段很多，完整项目很少，学完还是不知道怎么交付一个真实系统 问题不在于语言难学，而在于你手里的资料停在了五年前。",
@@ -258,6 +259,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/kotlin-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

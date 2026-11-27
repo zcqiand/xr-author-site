@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0H32SXR49",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/nextjs-zh-tw.jpg",
   "description": "在過去的幾年裡，Web 開發領域發生了巨大的變化。前端框架從最初的 jQuery 時代，經歷了 Angular、Vue、React 的崛起，如今 React 已成為構建現代 Web 應用的主流選擇。 然而，React 本身只是一個 UI 庫。將其轉化為生產級應用，需要處理大量額外的工作：服務端渲染、路由管理、代碼分割、圖片優化、構建工具配置……這些工作不僅耗時，而且需要開發者具備全棧知識。 Next.js 正是來解決這個問題的。 Next.js 是基於 React 的全棧 Web 開發框架，它將生產環境所需的各種能力全部打包開箱即用。當你使用 create-next-app 創建一個新項目時，服務端渲染、文件系統路由、代碼分割、圖片優化——全部都已經配置好了。 本書將幫助你係統掌握 Next.",
@@ -39,6 +40,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/nextjs-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

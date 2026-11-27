@@ -7,6 +7,7 @@
   "series": "ai-agents",
   "asin": "B0H3M3B8GG",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/claude-code-zh-cn.jpg",
   "description": "我非常高兴向你介绍这本书，它将帮助你掌握与 Claude Code 协同开发项目的方法，成为一名真正高效的代理式编码（Agentic Coding）实践者。Claude Code 不是\"下一个代码补全工具\"，它代表了 AI 辅助软件开发的一次范式跃迁——从帮你续写一行代码，到和你协同交付整个任务。它的能力横跨终端、IDE、SDK、API、Web 等多个入口，涉及大量命令、配置项、环境变量、权限规则、Hook、MCP 服务和 Agent SDK 接口。 这些能力强大，但也带来一个实际问题：命令散落在官方文档、更新日志和各处示例里，配置项之间互相影响，参数取值没有集中索引。",
@@ -86,6 +87,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/claude-code-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

@@ -7,6 +7,8 @@
   "series": "ai-agents",
   "asin": "B0HSLVJW73",
   "market": "co.jp",
+  "format": "kindle",
+  "paperbackAsin": "B0HS8FBQBN",
   "onSale": true,
   "cover": "/covers/codex-ja.jpg",
   "description": "--- 2025 年の秋、私はあるスタートアップでテクニカルアドバイザーを務めていました。チームは開発効率を高めるため、AI コーディングツールの全面導入を決めました。GitHub Copilot を試し、ChatGPT の Web 版でエンジニアにコードをデバッグさせるのも試しましたが、どちらも期待した効果は得られませんでした——Copilot は断片的なコードの補完しかできず、ChatGPT は手作業でのコピー＆ペーストが必要で、そのたびにプロジェクトのコンテクストを説明し直さなければならないのです。その後、チームは OpenAI Codex を見つけました。ファイルシステムを直接操作し、コマンドを実行し、Git を管理できるエージェント型コーディングツールです。",
@@ -25,6 +27,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/codex-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

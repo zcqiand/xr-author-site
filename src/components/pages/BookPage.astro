@@ -30,6 +30,8 @@ const fallbackFaq = faqData[slug]?.[lang] ?? faqData[slug]?.['zh-tw'] ?? [];
 const faq = d.faq.length > 0 ? d.faq : fallbackFaq;
 const name = authorData.name[lang as keyof typeof authorData.name] as string;
 const buyUrl = amazonUrl(d.asin, d.market);
+const isPaperback = d.format === 'paperback';
+const pbUrl = d.paperbackAsin ? amazonUrl(d.paperbackAsin, d.market) : '';
 const title = `${d.title} — ${ui.siteName}`;
 const description = d.description || d.subtitle || d.title;
 
@@ -50,7 +52,7 @@ const bookSchema = {
   description,
   author: personSchema,
   inLanguage: hreflangCode[lang],
-  bookFormat: 'https://schema.org/EBook',
+  bookFormat: isPaperback ? 'https://schema.org/Paperback' : 'https://schema.org/EBook',
   url: buyUrl,
   image: d.cover ? new URL(d.cover, SITE_URL).href : undefined,
   publisher: { '@type': 'Organization', name: 'Independently published' },
@@ -75,7 +77,10 @@ const jsonLd = faqSchema ? [bookSchema, faqSchema, personSchema] : [bookSchema, 
     <h1>{d.title}</h1>
     {d.subtitle && <p class="muted"><strong>{d.subtitle}</strong></p>}
     <p>
-      <a class="btn" href={buyUrl} rel="noopener">{ui.buy}</a>
+      <a class="btn" href={buyUrl} rel="noopener">{isPaperback ? ui.buyPaperback : ui.buy}</a>
+      {pbUrl && !isPaperback && (
+        <a class="btn btn-secondary" href={pbUrl} rel="noopener">{ui.buyPaperback}</a>
+      )}
       {d.onSale === false && <p class="muted">{ui.zhCnNote}</p>}
     </p>
 

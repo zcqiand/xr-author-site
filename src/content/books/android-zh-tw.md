@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0HPZZRMXR",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/android-zh-tw.jpg",
   "description": "入門經典停在 XML View 的時代，而 Android 已經進入 Compose-first 的時代。 這是今天想學 Android 的學習者面對的真實困境： - 市面上的入門書大多以 XML 佈局為主線，而 Google 已在 2026 年 5 月官宣 Material Android is Compose-first - 僅有的幾本 Compose 中文書寫在 Compose 1.0 早期版本上，照著敲在當前穩定版上大量無法編譯 - 官方文檔按 API 組織、以英文為主，不構成一條零基礎者能走通的學習路徑 - Kotlin 語言書與 Android 應用書是割裂的，語言學完不知道怎麼用在真實工程裡 問題不在於 Android 不值得學，而在於缺少一條「從 2026 年的技術面出發」的連貫路徑。",
@@ -451,6 +452,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/android-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

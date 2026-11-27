@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0H5XHQFK2",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/vue-zh-cn.jpg",
   "description": "这本书的起点是一组真实场景里反复出现的提问。 过去几年里，我在团队里带过不少刚入行的前端、转过岗的全栈预备役，也接手过几个被前任留下的 Vue 2 老项目。最常听到的吐槽是：「网上的 Vue 教程越看越乱。」一开始我以为只是学习路径问题，后来才发现是结构性的——他们看到的教程要么停在 Vue 2 + Options API 的旧范式（Vue 2 早在 2023 年 12 月 31 日就官方停止维护了），要么是 Vue 3 早期的「视频教学版」式 API 罗列，没人系统讲 ref 还是 reactive、Pinia 还是组件状态、Options 还是 Composition、CSR 还是 SSR/Nuxt——什么时候用、为什么。 这本书就是为了把这些「为什么」一次讲清楚而写的。",
@@ -25,6 +26,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/vue-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

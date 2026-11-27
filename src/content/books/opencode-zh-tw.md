@@ -7,6 +7,7 @@
   "series": "ai-agents",
   "asin": "B0HMP3BLT2",
   "market": "com",
+  "format": "kindle",
   "onSale": true,
   "cover": "/covers/opencode-zh-tw.jpg",
   "description": "AI 編碼工具越來越多，你的選擇權卻越來越少。 這是許多開發者的共同處境。我們見過太多這樣的場景： - 想用的工具按月付費，廠商一換，整套工作流跟著重來 - 免費額度說停就停，項目做到一半被迫遷移 - 數據不能出內網，雲端工具直接把人擋在門外 - 學的是舊版本教程，新版本界面一開，對不上號 問題不在模型不夠強，而在於“用哪個模型、花多少錢、數據放哪”這三件事，常常不由你決定。 開源陣營給出了另一個答案：OpenCode。 一個 MIT 許可、模型無關的 AI coding agent。它把選擇權交回你手裡：模型隨便接，預算自己定，數據可以不出本機。 這正是本書要講的東西：怎麼把這個工具，安全、系統地用在你自己的項目上。 OpenCode 是一個開源、模型無關的 AI 編碼智能體。",
@@ -554,6 +555,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/opencode-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

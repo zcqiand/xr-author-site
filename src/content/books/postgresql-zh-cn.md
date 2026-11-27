@@ -7,6 +7,7 @@
   "series": "backend",
   "asin": "B0H4WP4QK5",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/postgresql-zh-cn.jpg",
   "description": "2019年，我负责一个电商平台的数据库迁移项目——从 MySQL 迁移到 PostgreSQL。团队里有经验丰富的 MySQL DBA，也有工作了两年、SQL 写得不错的开发工程师。我以为迁移会很快，结果花了三个月。 问题不是出在迁移工具上，而是出在认知鸿沟上。MySQL DBA 习惯用 SHOW PROCESSLIST 看连接状态，到了 PostgreSQL 发现要用 pg_stat_activity；开发工程师以为 VACUUM 就是 MySQL 的 OPTIMIZE TABLE，结果在生产环境因为 autovacuum 配置不当导致表膨胀了 3 倍。那三个月里，我反复翻阅 PostgreSQL 官方文档、各种博客和论坛帖子，把零散的信息拼凑成一份内部培训手册——这本书就是从那份手册生长出来的。",
@@ -93,6 +94,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/postgresql-dba-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }

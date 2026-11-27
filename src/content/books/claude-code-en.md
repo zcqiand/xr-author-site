@@ -7,6 +7,8 @@
   "series": "ai-agents",
   "asin": "B0HR5ZVRB3",
   "market": "com",
+  "format": "kindle",
+  "paperbackAsin": "B0HQC28Q2P",
   "onSale": true,
   "cover": "/covers/claude-code-en.jpg",
   "description": "I am delighted to introduce this book, which will help you master project development in collaboration with Claude Code and become a truly effective agentic coding practitioner.",
@@ -86,6 +88,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/claude-code-book",
+  "caseRepos": [],
   "videos": []
 }
 ---

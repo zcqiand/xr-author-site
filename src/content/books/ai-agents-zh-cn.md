@@ -7,6 +7,7 @@
   "series": "ai-agents",
   "asin": "B0H3LX9N21",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/ai-agents-zh-cn.jpg",
   "description": "2024年，我参与了一个企业级智能客服系统的开发项目。项目要求 AI 能够根据用户问题自动路由到不同部门、调用内部 API、验证输出格式、记录完整对话历史。我原本以为\"调个 API 就能搞定\"，但真正动手时才发现：单一 LLM 调用远远不够，我们需要完整的 Agent 系统。 接下来的三个月，我的团队在框架选型上走了不少弯路。我们从 LangChain 开始，遇到复杂状态管理问题时又引入 LangGraph，反复在\"Chain 适合的简单流程\"和\"状态机适合的复杂编排\"之间权衡。官方文档分散且更新频繁，Stack Overflow 上的答案大多基于旧版本，市面上的书籍要么只讲单一框架的基础语法，要么内容已经过时。",

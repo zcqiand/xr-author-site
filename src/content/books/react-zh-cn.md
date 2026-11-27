@@ -7,6 +7,7 @@
   "series": "frontend",
   "asin": "B0H5DGZM5B",
   "market": "com",
+  "format": "kindle",
   "onSale": false,
   "cover": "/covers/react-zh-cn.jpg",
   "description": "2024 年 12 月，React 19 正式稳定发布，但中文图书市场对此的反应几乎为零。 这是我在学习和教学过程中反复感受到的一种割裂。打开豆瓣图书的 React 标签，你能看到的中文书全部出版于 2015–2018 年，覆盖的是 React 15.x 和 16.x 的 Class 组件写法与 Redux 模式。这些书在当年是好的资源，放到 2026 年的 React 19 生态里，示例代码无法运行、心智模型已经过时、推荐的架构方案早已被社区淘汰。中文 React 学习者面对的是一个长达 8 年的版本真空。",
@@ -576,6 +577,7 @@
     }
   ],
   "caseRepo": "https://github.com/zcqiand/react-book",
+  "caseRepos": [],
   "videos": [],
   "mirrorOf": "zh-tw"
 }
